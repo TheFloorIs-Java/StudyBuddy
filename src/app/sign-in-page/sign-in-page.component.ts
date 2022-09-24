@@ -22,6 +22,7 @@ signIn() :void{
   if(this.checkPass()){ 
   //when addUser actually works, this should work
   this.uservice.addUser(this.name, this.username, this.password);
+   this.uservice.getAllUsers().subscribe(data => console.log(data));
   //for now we pretend it worked and reroute to the log in page
   this.router.navigateByUrl('');
   }

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HomeworkServiceService } from './homework-service.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class GlobalServiceService {
 //this is going to prove if someone is logged in
  private loggedIn : boolean;
 
-  constructor() {
+  constructor( ) {
     this.loggedIn=false;
    }
 
@@ -25,6 +26,7 @@ export class GlobalServiceService {
   //lets user log out
   LogUserOut() : void{
     this.loggedIn=false;
+    //this.hservice.homeworkArray=[];
   }
 
 }

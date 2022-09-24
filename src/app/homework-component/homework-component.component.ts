@@ -1,9 +1,9 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectorRef} from '@angular/core';
 import { homework } from '../model/homework';
 import { GlobalServiceService } from '../services/global-service.service';
 import { HomeworkServiceService } from '../services/homework-service.service';
-import { FormBuilder, FormGroup, FormArray, FormControl } from '@angular/forms';
 import {  Router } from '@angular/router';
+import { AuthGuardServiceService } from '../services/auth-guard-service.service';
 
 @Component({
   selector: 'app-homework-component',
@@ -12,9 +12,11 @@ import {  Router } from '@angular/router';
 })
 export class HomeworkComponentComponent implements OnInit {
   
-  constructor(public gservice :GlobalServiceService, private hservice : HomeworkServiceService, 
-    private router: Router) { }
+  constructor(public gservice :GlobalServiceService,
+     private hservice : HomeworkServiceService) {}
+
   homeworkArray : Array<homework> = [];
+  
  addNewItem : string="";
  itemCompleted : string ="";
  message : string ="";
@@ -23,31 +25,27 @@ export class HomeworkComponentComponent implements OnInit {
   Subject : string ="";
   
   ngOnInit(): void {
-    this.hservice.getAllHw().subscribe(data => this.homeworkArray=data);
-    
+   // this.hservice.getAllHw().subscribe(data => this.homeworkArray=data);
+  
   }
 
+public trackHw(index: number, item: homework): string{
+  return item.hwItem;
+}
  //gets specific HW depending on the subject and user, it will return am Array of hwItem Strings
  getHwForSubject() : Array<string>{
-  let answer = new Array<string>;
-  for (let  i=0 ; i< this.homeworkArray.length; i++){
-      if(this.homeworkArray[i].name==this.gservice.currentUserName && this.homeworkArray[i].subject==this.Subject){
-        answer.push(this.homeworkArray[i].hwItem);
-      }
-  }
-  return answer;
+  this.hservice.getHwForSubject(this.Subject);
+  return this.hservice.homeworkItem;
 }
-
-// Selected(itemSelected :string ){
-//  this.itemCompleted =itemSelected;
-// }
 
 complete(){
   this.message = this.itemCompleted + " will be added to complete when completed";
+  this.hservice.deleteHwItem(this.itemCompleted);
 }
 //adds and refreshes
 addItemToHomework(){
   this.hservice.addHwItemForSubject(this.Subject,this.addNewItem);
 }
+
 
 }
