@@ -1,0 +1,50 @@
+#entireHomework{
+    border: 3px solid black;
+    width: 50%;
+    justify-content: center;
+}
+.title{
+    text-align: center;
+}
+.centerThis{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-self: center;
+    justify-self: center;
+}
+#itemList{
+   border: 2px solid black;
+   justify-content: center;
+   justify-items: center;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+}
+.items{
+    justify-content: center;
+    align-self: center;
+}
+#editingList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    justify-items: center;
+   padding: 10px;
+}
+#completed{
+    border: 2px solid black;
+    width: 25%;
+    height: 150px;
+    padding: 10px;
+    margin: auto;
+}
+#add{
+    border: 2px solid black;
+    justify-content: center;
+    width: 25%;
+    height: 150px;
+    padding: 10px;
+    margin: auto;
+}

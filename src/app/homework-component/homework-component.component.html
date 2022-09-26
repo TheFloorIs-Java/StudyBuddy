@@ -1,22 +1,27 @@
 <h2>Welcome to {{Subject}} {{this.gservice.currentUserName}}</h2>
-<div >
-    <ul *ngFor ="let hwItemz of getHwForSubject()">
-    <li>{{hwItemz }}</li>
-</ul>
+<div id="entireHomework">
+    <h2 id="homeworkTitle" class="title">Homework for {{Subject}}</h2>
+    <div id="itemList">
+        <ul *ngFor ="let hwItemz of getHwForSubject()" class="items">
+            <li id="listItem">{{hwItemz }}</li>
+        </ul>
+    </div>
+
+    <p></p>
+
+    <div id="editingList">
+        <div id="completed">
+            <h3 class="title">Select Item Completed Below:</h3>
+            <select [(ngModel)]="itemCompleted" class="centerThis">
+                <option *ngFor ="let hwItemz of getHwForSubject()" > {{hwItemz}}</option>
+            </select>
+            <button class="centerThis" (click)="complete()">Completed</button>
+        </div>
+        <div id="add">
+            <h3 class="title"> Add New Homework Item Below:</h3>
+            <input type="text" [(ngModel)]="addNewItem" class="centerThis" />
+            <button (click)="addItemToHomework()" class="centerThis" >Add To Homework</button>
+        </div>
+    </div>
+    <h4 class="title">{{message}}</h4>
 </div>
-
-<p></p>
-
-<h3>Select Item Completed Below:</h3>
-<select [(ngModel)]="itemCompleted" >
-    <option *ngFor ="let hwItemz of getHwForSubject()" > {{hwItemz}}</option>
-</select>
-
-<button (click)="complete()">Completed</button>
-
-<h3>Add New Homework Item Below:</h3>
-<input type="text" [(ngModel)]="addNewItem" />
-
-<button (click)="addItemToHomework()">Add To Homework</button>
-
-<h3>{{message}}</h3>

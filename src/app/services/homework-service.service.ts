@@ -46,8 +46,11 @@ export class HomeworkServiceService {
   }
 
   getIdHw(hwIn : string ) : number{
+    console.log(this.homeworkArray);
     for (let  i=0 ; i< this.homeworkArray.length; i++){
       if(this.homeworkArray[i].hwItem==hwIn && this.homeworkArray[i].name ==this.gservice.currentUserName){
+        console.log(hwIn);
+        console.log(this.gservice.currentUserName);
         //because it is 0 based index and the id starts at 1
       return i+1;
       }
