@@ -12,12 +12,12 @@ export class UserServiceService {
 
   //gets all users
   getAllUsers() : Observable<Array<user>>{
-      return this.http.get<Array<user>>("https://632d0724519d17fb53b6f382.mockapi.io/user");
-  }
-  //when we create an API we can change "URL" to our API url
-  addUser(nameIn: string, usernameIn: string, passwordIn: string): void{
-      // this.http.post<any>("URL", 
-      // {name:nameIn, username:usernameIn, password:passwordIn}).subscribe(data=>console.log(data));
-  }
+    return this.http.get<Array<user>>("https://632cb92f519d17fb53b2cfb1.mockapi.io/users");
+}
+//when we create an API we can change "URL" to our API url
+addUser(nameIn: string, usernameIn: string, passwordIn: string): void{
+    this.http.post<any>("https://632d0724519d17fb53b6f382.mockapi.io/user", 
+    {name:nameIn, username:usernameIn, password:passwordIn}).subscribe(data=>console.log(data));
+}
 
 }

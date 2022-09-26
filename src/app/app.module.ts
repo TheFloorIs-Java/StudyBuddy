@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LogInPageComponent } from './log-in-page/log-in-page.component';
 import { SignInPageComponent } from './sign-in-page/sign-in-page.component';
+import { ReportCardComponent } from './components/report-card/report-card.component';
+import { GradesComponent } from './components/grades/grades.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LogInPageComponent,
-    SignInPageComponent
+    SignInPageComponent,
+    ReportCardComponent,
+    GradesComponent
   ],
   imports: [
     BrowserModule,
