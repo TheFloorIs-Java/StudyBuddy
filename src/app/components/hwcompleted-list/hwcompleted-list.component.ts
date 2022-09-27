@@ -1,5 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
+import { Subject } from 'rxjs';
 import { hwcompleted } from 'src/app/model/hwcompleted';
 import { HwCompletedServiceService } from 'src/app/services/hw-completed-service.service';
 
@@ -11,6 +12,8 @@ import { HwCompletedServiceService } from 'src/app/services/hw-completed-service
 export class HwcompletedListComponent implements OnInit {
 
   completedhomework : Array<hwcompleted> = [];
+  completedhwSubID: Array<hwcompleted> = [];
+  userIdhwcompleted: Array<hwcompleted> = [];
 
   constructor(private hwservice : HwCompletedServiceService) { }
 
@@ -18,12 +21,13 @@ export class HwcompletedListComponent implements OnInit {
     this.hwservice.getAllHwCompleted().subscribe(
       data => {this.completedhomework= data; console.log(data)});
   }
-}
-  /*
-  getHwCompletedBySubject() : Array<number>{
-    this.hwservice.getHwCompleteBySubject(this.Subject);
-    return this.hwservice.subjectID;
+  getHwCompletedForSubjectID(subjectID: number){
+    this.completedhwSubID = new Array<hwcompleted>;
   }
+  getHwCompletedForUserId(userId: number){
+    this.userIdhwcompleted= new Array<hwcompleted>;
+  }
+}
 
 
 
