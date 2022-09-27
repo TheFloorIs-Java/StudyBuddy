@@ -1,17 +1,31 @@
-<h1> Sign In Page</h1>
+<div class="LogPage">
+<div class="container_">
+<form class="form" id="login">
+<h1 class="form_title">Sign Up Page</h1>
+<div class="form_input-group">
 <h3>Name</h3>
-<input type="text" [(ngModel)] = "name" > 
+<input type="text" class="form_input" [(ngModel)] = "name" > 
+</div>
 
+
+
+<div class="form_input-group">
 <h3>Username</h3>
-<input type="text" [(ngModel)] = "username" > 
-
-
-<h3>password</h3>
-<input type="text" [(ngModel)] = "password" > 
+<input type="text" class="form_input" [(ngModel)] = "username" > 
 <br>
+</div>
 
+<div class="form_input-group">
+<h3>Password</h3>
+<input type="text" class="form_input" [(ngModel)] = "password" > 
+<br>
+</div>
+</form>
+</div>
+</div>
 
 <span>{{message}}</span><br>
-<button (click)="signIn()"> Sign In</button>
+<button class="log_button" (click)="signIn()"> Sign Up</button>
+
 
 

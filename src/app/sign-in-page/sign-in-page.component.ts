@@ -8,10 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./sign-in-page.component.css']
 })
 export class SignInPageComponent implements OnInit {
+
 name :string= "";
 username: string ="";
 password: string ="";
 message: string ="";
+
   constructor( private uservice : UserServiceService, private router: Router) { }
 
   ngOnInit(): void {
