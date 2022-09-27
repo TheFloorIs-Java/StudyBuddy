@@ -6,12 +6,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LogInPageComponent } from './log-in-page/log-in-page.component';
 import { SignInPageComponent } from './sign-in-page/sign-in-page.component';
+import { HwcompletedComponent } from './components/hwcompleted/hwcompleted.component';
+import { HwcompletedListComponent } from './components/hwcompleted-list/hwcompleted-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LogInPageComponent,
-    SignInPageComponent
+    SignInPageComponent,
+    HwcompletedComponent,
+    HwcompletedListComponent
   ],
   imports: [
     BrowserModule,
