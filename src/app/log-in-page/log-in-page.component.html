@@ -3,19 +3,17 @@
 <form class="form" id="login">
 <h1 class="form_title">Log In Page</h1>
 <div class="form_input-group">
-<h3>Username</h3>
-<input type="text" class="form_input" [(ngModel)] = "username"> 
+<input type="text" class="form_input" autofocus placeholder="Username" [(ngModel)] = "username"> 
 </div>
 
 <div class="form_input-group">
-<h3>Password</h3>
-<input type="text" class="form_input" [(ngModel)] = "password"> 
-<br>
+<input type="text" class="form_input" autofocus placeholder="Password" [(ngModel)] = "password"> 
 </div>
-</form>
-</div>
-</div>
+
 
 <button class="log_button" (click)="check()">Log In</button>
 <button class="log_button" (click)="signInPage()"> Sign In</button>
 <h1>{{message}}</h1>
+</form>
+</div>
+</div>

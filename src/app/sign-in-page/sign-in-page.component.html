@@ -3,29 +3,24 @@
 <form class="form" id="login">
 <h1 class="form_title">Sign Up Page</h1>
 <div class="form_input-group">
-<h3>Name</h3>
-<input type="text" class="form_input" [(ngModel)] = "name" > 
+<input type="text" class="form_input" autofocus placeholder="Name" [(ngModel)] = "name" > 
 </div>
 
 
 
 <div class="form_input-group">
-<h3>Username</h3>
-<input type="text" class="form_input" [(ngModel)] = "username" > 
-<br>
+<input type="text" class="form_input" autofocus placeholder="Username" [(ngModel)] = "username" > 
 </div>
 
 <div class="form_input-group">
-<h3>Password</h3>
-<input type="text" class="form_input" [(ngModel)] = "password" > 
-<br>
+<input type="text" class="form_input" autofocus placeholder="Password" [(ngModel)] = "password" > 
 </div>
-</form>
-</div>
-</div>
+
 
 <span>{{message}}</span><br>
 <button class="log_button" (click)="signIn()"> Sign Up</button>
-
+</form>
+</div>
+</div>
 
 

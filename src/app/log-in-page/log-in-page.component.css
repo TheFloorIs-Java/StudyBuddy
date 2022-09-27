@@ -1,118 +1,116 @@
-body{
-     margin: 0;
-     font-size: 18px;
-     align-items: center;
-     justify-content: center; 
- }
-
- .LogPage{
+body {
     margin: 0;
     font-size: 18px;
-    background-size: cover;
-    background-repeat: 5px;
+    align-items: center;
+    justify-content: center;
+}
+
+.LogPage{
+    margin: 0;
+    font-size: 18px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url(https://livingstonmontessori.com/images/illustrations/undraw_book_lover_mkck.svg);
+    /* background: url(https://livingstonmontessori.com/images/illustrations/undraw_book_lover_mkck.svg); */
     background-size: cover;
     background-repeat: 5px;
+}
 
+.container_ {
+   width: 400px;
+   max-width: 400px;
+   margin: 1rem;
+   padding: 2rem;
+   box-shadow: 0 0 40px black;
+   border-radius: var(--border-radius);
+    background: url(https://livingstonmontessori.com/images/illustrations/undraw_book_lover_mkck.svg); 
+   background-size: cover;
+   background-repeat: 5px;
+}
 
- }
+.container,
+.form_input,
+.form_button {
+   font: 500 1rem 'Quicksand', sans-serif;
+}
 
- .container_ {
-    width: 400px;
-    max-width: 400px;
-    margin: 1rem;
-    padding: 2rem;
-    box-shadow: 0 0 40px black;
-    border-radius: var(--border-radius);
-   
- }
+.form > *:first-child {
+   margin-top: 0;
+}
 
- .container,
- .form_input,
- .form_button {
-    font: 500 1rem 'Quicksand', sans-serif;
- }
+.form > *:first-child {
+   margin-top: 0;
+}
 
- .form > *:first-child {
-    margin-top: 0;
- }
+.form_title {
+   margin-bottom: 2rem;
+   text-align: center;
+   color: black;
+}
 
- .form > *:first-child {
-    margin-top: 0;
- }
+.form_input-group{
+   margin-bottom: 1rem;
+}
 
- .form_title {
-    margin-bottom: 2rem;
-    text-align: center;
-    color: black;
- }
+.form_input {
+   display: block;
+   width: 100%;
+   padding: 1rem;
+   box-sizing: border-box;
+   border-radius: 2px;
+   outline: none;
+   background: white;
+   transition: background 0.2s, border-color 0.2s;
+}
 
- .form_input-group{
-    margin-bottom: 1rem;
- }
+.form_input:focus {
+   border-color: black;
+   background: white;
+}
 
- .form_input {
-    display: block;
-    width: 100%;
-    padding: 1rem;
-    box-sizing: border-box;
-    border-radius: 2px;
-    outline: none;
-    background: white;
-    transition: background 0.2s, border-color 0.2s;
- }
+.log_button {
+   width: 50%;
+   padding: 1rem;
+   font-weight: bold;
+   font-size: 1.1rem;
+   color: black;
+   outline: none;
+   cursor: pointer;
+   background: white;
+}
 
- .form_input:focus {
-    border-color: black;
-    background: white;
- }
+.form_button:hover {
+   background: white;
+}
 
- .log_button {
-    width: 50%;
-    padding: 1rem;
-    font-weight: bold;
-    font-size: 1.1rem;
-    color: black;
-    outline: none;
-    cursor: pointer;
-    background: white;
- }
+.form_button:active {
+   transform: scale(0.9);
+}
 
- .form_button:hover {
-    background: white;
- }
+.form_text {
+   text-align: center;
+}
 
- .form_button:active {
-    transform: scale(0.9);
- }
+.form_link {
+   color: white;
+   text-decoration: none;
+   cursor: pointer;
+}
 
- .form_text {
-    text-align: center;
- }
-
- .form_link {
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
- }
-
- .forn_link:hover {
-    text-decoration: underline;
- }
+.forn_link:hover {
+   text-decoration: underline;
+}
 
 h1 {
-    display: block;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
+   display: block;
+   font-size: 2em;
+   margin-block-start: 0.67em;
+   margin-block-end: 0.67em;
+   margin-inline-start: 0px;
+   margin-inline-end: 0px;
+   font-weight: bold;
 }
 
 h3 {
-    color: black;
+   color: black;
 }
