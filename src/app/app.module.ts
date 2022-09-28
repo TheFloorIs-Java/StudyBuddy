@@ -8,6 +8,7 @@ import { LogInPageComponent } from './log-in-page/log-in-page.component';
 import { SignInPageComponent } from './sign-in-page/sign-in-page.component';
 import { HwcompletedComponent } from './components/hwcompleted/hwcompleted.component';
 import { HwcompletedListComponent } from './components/hwcompleted-list/hwcompleted-list.component';
+import { TipsComponent } from './components/tips/tips.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HwcompletedListComponent } from './components/hwcompleted-list/hwcomple
     LogInPageComponent,
     SignInPageComponent,
     HwcompletedComponent,
-    HwcompletedListComponent
+    HwcompletedListComponent,
+    TipsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,11 @@
+<br />
+<h2>Tips</h2>
+<textarea [(ngModel)]="tipadd"></textarea>
+<br />
+<p>You are adding a Tip: {{ tipadd }}</p>
+<br />
+<button (click)="post()">Insert</button>
+<hr />
+<div *ngFor="let tips of postTip">
+  <p>{{ tips }}</p>
+</div>
