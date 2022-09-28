@@ -6,6 +6,7 @@ import { user } from '../model/user';
 import { UserServiceService } from '../services/user-service.service';
 
 
+
 @Component({
   selector: 'app-log-in-page',
   templateUrl: './log-in-page.component.html',
@@ -17,6 +18,7 @@ export class LogInPageComponent implements OnInit {
   username: string ="";
   password: any ="";
   message : string = "";
+
   constructor(private uservice: UserServiceService, private router: Router) { }
   allUsers : Array<user> =[];
   ngOnInit(): void {

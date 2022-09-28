@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { LogInPageComponent } from './log-in-page/log-in-page.component';
 import { SignInPageComponent } from './sign-in-page/sign-in-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 
 
 @NgModule({
@@ -16,7 +16,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     LogInPageComponent,
     SignInPageComponent,
     HomePageComponent,
-    NavBarComponent   
+    WelcomePageComponent   
   ],
   imports: [
     BrowserModule,
