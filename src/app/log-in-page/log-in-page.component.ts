@@ -42,7 +42,7 @@ export class LogInPageComponent implements OnInit {
         this.gservice.currentUserId = this.allUsers[i].userId;
         // user is logged in 
        this.gservice.LogUserIn();
-        this.router.navigateByUrl('home');
+        this.router.navigateByUrl('welcomepage');
        messagedOut=true;
       }
     }

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  Math : string = "Math";
+  // Math : string = "Math";
   constructor() { }
 
   ngOnInit(): void {

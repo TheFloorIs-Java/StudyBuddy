@@ -1,14 +1,19 @@
-<h1> Log In Page</h1>
-<h3>Username</h3>
-<input type="text" [(ngModel)] = "username"> 
-
-
-<h3>password</h3>
-<input type="text" [(ngModel)] = "password"> 
-<br>
-
-
-
-<button (click)="check()">Log In</button> <button (click)="signInPage()"> Sign In</button>
-<h1>{{message}}</h1>
-
+<div class="LogPage">
+    <div class="container_">
+    <!-- <form class="form" id="login"> -->
+    <h1 class="form_title">Log In Page</h1>
+    <div class="form_input-group">
+    <input type="text" class="form_input" autofocus placeholder="Username" [(ngModel)] = "username"> 
+    </div>
+    
+    <div class="form_input-group">
+    <input type="text" class="form_input" autofocus placeholder="Password" [(ngModel)] = "password"> 
+    </div>
+    
+    
+    <button class="log_button" (click)="check()">Log In</button>
+    <button class="log_button" (click)="signInPage()"> Sign In</button>
+    <h1>{{message}}</h1>
+    <!-- </form> -->
+    </div>
+    </div>
