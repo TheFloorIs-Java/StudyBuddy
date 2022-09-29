@@ -1,19 +1,12 @@
 
 a{
-   margin-right: 75px;
-   padding-right: 75px;
+   margin-right: 55px;
+   padding-right: 55px;
 } 
-.spacer{
-   flex:  2 2  auto;
-}
-menu{
-   background: #333;
-}
-.subject-toggle{
-   margin-top: 25px;
-}
-.menu-item{
+  
+.menu-item {
    cursor: pointer;
+   padding: 5px 0;
 }
 .menu-item :hover{
    text-decoration: underline;
