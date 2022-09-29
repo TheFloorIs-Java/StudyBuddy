@@ -14,6 +14,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatSelectModule} from '@angular/material/select';
+import { TipsComponent } from './tips/tips.component';
 // import { clickedOutsideDirective } from './nav-bar/nav-barClickOutside.directive';
 
 @NgModule({
@@ -22,6 +23,7 @@ import {MatSelectModule} from '@angular/material/select';
     LogInPageComponent,
     SignInPageComponent,
     NavBarComponent,
+    TipsComponent,
     
     
       
