@@ -11,6 +11,9 @@ export class HomePageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    // this.sservice.getAllSubjects();
+    // console.log("did it");
+    // console.log(this.sservice.getSubjectByName(this.Math))
   }
 
 }

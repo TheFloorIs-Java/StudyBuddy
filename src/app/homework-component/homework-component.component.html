@@ -2,8 +2,8 @@
 <div id="entireHomework">
     <h2 id="homeworkTitle" class="title">Homework for {{Subject}}</h2>
     <div id="itemList">
-        <ul *ngFor ="let hwItemz of getHwForSubject()" class="items">
-            <li id="listItem">{{hwItemz }}</li>
+        <ul *ngFor ="let hwItemz of  homeworkArray" class="items">
+            <li id="listItem">{{hwItemz.hwItem }}</li>
         </ul>
     </div>
 
@@ -12,14 +12,14 @@
     <div id="editingList">
         <div id="completed">
             <h3 class="title">Select Item Completed Below:</h3>
-            <select [(ngModel)]="itemCompleted" class="centerThis">
-                <option *ngFor ="let hwItemz of getHwForSubject()" > {{hwItemz}}</option>
+            <select [(ngModel)]="itemCompleted" class="centerThis" placeholder="Select Homework">
+                <option *ngFor ="let hwItemz of homeworkArray" > {{hwItemz.hwItem}}</option>
             </select>
             <button class="centerThis" (click)="complete()">Completed</button>
         </div>
         <div id="add">
             <h3 class="title"> Add New Homework Item Below:</h3>
-            <input type="text" [(ngModel)]="addNewItem" class="centerThis" />
+            <input type="text" [(ngModel)]="addNewItem" class="centerThis" placeholder="Homework Item" />
             <button (click)="addItemToHomework()" class="centerThis" >Add To Homework</button>
         </div>
     </div>

@@ -7,6 +7,7 @@ import { HomeworkServiceService } from './homework-service.service';
 export class GlobalServiceService {
 //this this going to be used to declare the global user that is signed in 
   currentUserName : string="";
+  currentUserId : number=0;
 
 //this is going to prove if someone is logged in
  private loggedIn : boolean;

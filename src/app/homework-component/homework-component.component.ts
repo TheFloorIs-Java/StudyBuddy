@@ -4,6 +4,7 @@ import { GlobalServiceService } from '../services/global-service.service';
 import { HomeworkServiceService } from '../services/homework-service.service';
 import {  Router } from '@angular/router';
 import { AuthGuardServiceService } from '../services/auth-guard-service.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-homework-component',
@@ -11,11 +12,13 @@ import { AuthGuardServiceService } from '../services/auth-guard-service.service'
   styleUrls: ['./homework-component.component.css']
 })
 export class HomeworkComponentComponent implements OnInit {
-  
-  constructor(public gservice :GlobalServiceService,
-     private hservice : HomeworkServiceService) {}
-
   homeworkArray : Array<homework> = [];
+  constructor(public gservice :GlobalServiceService,
+     private hservice : HomeworkServiceService) {
+     // this.hservice.getHwForSubject(this.Subject).subscribe(data=>this.homeworkArray=data);
+     }
+
+
   
  addNewItem : string="";
  itemCompleted : string ="";
@@ -25,26 +28,35 @@ export class HomeworkComponentComponent implements OnInit {
   Subject : string ="";
   
   ngOnInit(): void {
-   // this.hservice.getAllHw().subscribe(data => this.homeworkArray=data);
-  
+  this.hservice.getHwForSubject(this.Subject).subscribe(data=>{this.homeworkArray=data; console.log(data)});
   }
-
+  
 public trackHw(index: number, item: homework): string{
   return item.hwItem;
 }
  //gets specific HW depending on the subject and user, it will return am Array of hwItem Strings
- getHwForSubject() : Array<string>{
-  this.hservice.getHwForSubject(this.Subject);
-  return this.hservice.homeworkItem;
-}
+//  getHwForSubject() : Observable<Array<homework>>{
+//   return this.hservice.getHwForSubject(this.Subject);
+// }
 
 complete(){
-  this.message = this.itemCompleted + " will be added to complete when completed";
-  this.hservice.deleteHwItem(this.itemCompleted);
+  if(this.itemCompleted!=""){
+    this.message = this.itemCompleted + " will be added to complete when completed";
+    this.hservice.deleteHwItem(this.itemCompleted);
+    for(let i =0; i<this.homeworkArray.length; i++){
+      if(this.homeworkArray[i].hwItem==this.itemCompleted){
+        this.homeworkArray.splice(i,1);
+      }
+    } 
+}
 }
 //adds and refreshes
 addItemToHomework(){
+  if(this.addNewItem!=""){
   this.hservice.addHwItemForSubject(this.Subject,this.addNewItem);
+  this.homeworkArray.push({userId: this.gservice.currentUserId, subjectId: 0, hwId: 0, hwItem: this.addNewItem});
+  this.addNewItem="";
+  }
 }
 
 

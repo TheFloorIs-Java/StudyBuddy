@@ -39,6 +39,7 @@ export class LogInPageComponent implements OnInit {
       if(this.allUsers[i].username==this.username && this.allUsers[i].password==this.password){
         // set the currentUserName
         this.gservice.currentUserName=this.allUsers[i].name;
+        this.gservice.currentUserId = this.allUsers[i].userId;
         // user is logged in 
        this.gservice.LogUserIn();
         this.router.navigateByUrl('home');
