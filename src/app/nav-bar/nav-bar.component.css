@@ -1,4 +1,32 @@
 
+a{
+   margin-right: 75px;
+   padding-right: 75px;
+} 
 .spacer{
    flex:  2 2  auto;
+}
+menu{
+   background: #333;
+}
+.subject-toggle{
+   margin-top: 25px;
+}
+.menu-item{
+   cursor: pointer;
+}
+.menu-item :hover{
+   text-decoration: underline;
+} 
+.wholeContainer{
+   display: flex;
+   
+}
+.wholeContainer h1{
+   margin-right: 575px;
+   margin-left: 55px;
+}
+.menuToggle{
+   margin-right: 150px;
+   
 }

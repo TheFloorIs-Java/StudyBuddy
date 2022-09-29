@@ -1,3 +1,4 @@
+
 // import { AppModule } from './app.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,15 +12,19 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import {MatToolbarModule } from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import {MatSelectModule} from '@angular/material/select';
+// import { clickedOutsideDirective } from './nav-bar/nav-barClickOutside.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     LogInPageComponent,
     SignInPageComponent,
-    NavBarComponent
+    NavBarComponent,
+    
+    
+      
   ],
   imports: [
     BrowserModule,
@@ -28,8 +33,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     MatToolbarModule,
     BrowserAnimationsModule,
-    MatButtonModule
-
+    MatButtonModule,
+    MatAutocompleteModule,
+    MatSelectModule,
+  
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,6 +8,7 @@ const routes: Routes = [
   {path: 'navBar',component:NavBarComponent},
   {path: '',component: LogInPageComponent },
  {path: 'signIn',component: SignInPageComponent}
+
   ];
 
 @NgModule({

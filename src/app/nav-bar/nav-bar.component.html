@@ -1,15 +1,40 @@
-<!-- <a routerLink = "/" >Home</a>
- <a routerLink = "/" >Subject</a>
- <a routerLink = "/" >HomeWork</a>
- <a routerLink = "Login" >Login</a>
- <a routerLink = "signIn" >SignIn</a> -->
- <mat-toolbar color="primary">
+
+
+ <div class="wholeContainer" >
+   <h1>Study Buddy</h1>
+   <div class="home"><a routerLink = "/" >Home</a></div>
+ <div class="main-container">
+ <div class="menuToggle" (click)="menuToggle()">Subject</div>
+ <div class="menu" *ngIf="isMenuOpened ">
+  <div class="menu-item" ><a routerLink = "/" >Math</a></div>
+  <div class="menu-item" ><a routerLink = "/" >English</a></div>
+  <div class="menu-item" ><a routerLink = "/" >science</a></div>
+  <div class="menu-item" ><a routerLink = "/" >Music</a></div>
+  <div class="menu-item" ><a routerLink = "/" >Art</a></div>
+  <div class="menu-item" > <a routerLink = "/" >Physics</a></div>
+</div>
+</div>
+  <div><a routerLink = "Login" >Login</a></div>
+ <div><a routerLink = "signIn" >SignIn</a></div>
+</div> 
+
+ 
+  <!-- <mat-toolbar color="primary">
     <span>StdyBuddy</span>
     <div class="spacer"></div>
+    
     <a routerLink="/" mat-button>Home</a>
-    <a routerLink="/" mat-button>Subject</a>
-    <a routerLink="/"  mat-button>HomeWork</a>
-    <a routerLink="Login"  mat-raised-button color="accent">Login</a>
-    <a routerLink="signIn"  mat-button>Sign in</a>
-  </mat-toolbar>
-
+   <div class ="subjectToggle" (click)="subjectToggle"> <a  mat-button>Subject</a>
+   <div class="menu" *ngIf="isMenuOpened">
+   <div class="menu-item"> <a routerLink="/"  mat-button>Math</a></div>
+   <div class="menu-item"> <a routerLink="/"  mat-button>English</a></div>
+   <div class="menu-item"> <a routerLink="/"  mat-button>Music</a></div>
+   <div class="menu-item"> <a routerLink="/"  mat-button>science</a></div>
+   <div class="menu-item"> <a routerLink="/"  mat-button>Art</a></div>
+   </div>
+  </div>
+   <div> <a routerLink="/"  mat-button>HomeWork</a></div>
+   <div><a routerLink="Login"  mat-raised-button color="accent">Login</a></div>
+   <div><a routerLink="signIn"  mat-button>Sign in</a></div> -->
+   
+ 
