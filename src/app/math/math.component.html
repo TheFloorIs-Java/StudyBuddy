@@ -1,13 +1,11 @@
-
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Welcome Back {{name}}</title>
+<title>Subject Math</title>
 </head>
 <body>
 <nav class="navbar">
-        <a href="/" class="navbar_logo">STUDYBUDDY</a>
+        <a href="/" class="navbar_logo">STDYBUDDY</a>
       <div class="navbar_toggle" id="mobile-menu">
         <span class="bar"></span>
         <span class="bar"></span>
@@ -22,9 +20,8 @@
 
     <div class="hero">
         <div class="hero_content">
-            <h1>Welcome Back {{name}}!</h1>
-        </div>
-
+         <app-homework-component [Subject]="Math"></app-homework-component>       
+         </div>
     </div>
 
 </body>

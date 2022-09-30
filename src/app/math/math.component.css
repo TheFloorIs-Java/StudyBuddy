@@ -8,7 +8,7 @@
 
 .navbar {
     background: linear-gradient(to right, lightgreen, darkgreen);
-    height: 70px;
+    height: 60px;
     padding: 0.5rem calc((100vw - 1200px) / 2);
     display: flex;
     justify-content: space-between;
@@ -100,16 +100,16 @@
 
 .hero {
     background:  linear-gradient(to right, lightgreen, darkgreen);
-    height: 100vh;
-    background-position: center;
+    /* height: 100vh; */
+    /* background-position: center;
     background-size: cover;
     padding: 0.5rem calc((100vw - 1200px) / 2);
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-start; */
        
 }
 
-.hero_content {
+/* .hero_content {
     color: var(--black) ;
     padding: 3rem 1rem;
     line-height: 1;
@@ -124,4 +124,4 @@
 .hero_content p {
     font-size: clamp(0rem, 2vw, 1rem );
     margin-bottom: 1rem;
-}
+} */
