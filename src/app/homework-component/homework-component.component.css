@@ -2,10 +2,6 @@
     box-sizing: border-box;
     margin: 0;
     font-family: 'Kumbh Sans', sans-serif;
-<<<<<<< HEAD
-
-=======
->>>>>>> refs/remotes/origin/SignInAndLogIn-Harveen
     scroll-behavior: smooth;
 
 }
@@ -13,17 +9,13 @@
 .main {
     background: linear-gradient(to right, lightgreen, darkgreen);
     height: 100vh;
-<<<<<<< HEAD
     width: 100%;
-=======
->>>>>>> refs/remotes/origin/SignInAndLogIn-Harveen
     background-position: center;
     display: flex;
     justify-content: flex-start; 
 }
 
 
-<<<<<<< HEAD
 .container_{
    border: 3px solid black;
    justify-content: center;
@@ -35,19 +27,6 @@ min-height: 400px;
    border-radius: 25px;
    /* border-radius: var(--border-radius); */
    /* background: linear-gradient(to bottom, rgb(220, 246, 220), rgba(85, 249, 85, 0.499)); */
-=======
-
-.container_{
-   border: 3px solid black;
-   width: 50%;
-   justify-content: center;
-   width: 400px;
-   max-width: 400px;
-   margin: 1rem;
-   padding: 2rem;
-   box-shadow: 0 0 40px black;
-   border-radius: var(--border-radius);
->>>>>>> refs/remotes/origin/SignInAndLogIn-Harveen
 }
 
 .main_content h1 {
@@ -59,11 +38,7 @@ min-height: 400px;
 
 h3 {
    display: block;
-<<<<<<< HEAD
    font-size: 1.4em;
-=======
-   font-size: 1em;
->>>>>>> refs/remotes/origin/SignInAndLogIn-Harveen
    font-weight: bold;
 }
 
@@ -77,7 +52,6 @@ h3 {
 }
 
 #itemList {
-<<<<<<< HEAD
    border: 2px double white;
    border-radius: 15px;
    justify-content: center;
@@ -89,26 +63,15 @@ h3 {
     padding: 10px;
     background-color: linear-gradient(to bottom, rgb(220, 246, 220), rgba(85, 249, 85, 0.499));
 }
-=======
-   border: 2px solid black;
-   justify-content: center;
-   justify-items: center;
-}
->>>>>>> refs/remotes/origin/SignInAndLogIn-Harveen
 
 .items{
     justify-content: center;
     align-self: center;
 }
 .editingcontainer {
-<<<<<<< HEAD
     box-shadow: 0 0 40px white;
     border-radius: 25px;
     /* border-radius: var(--border-radius); */
-=======
-    box-shadow: 0 0 40px black;
-    border-radius: var(--border-radius);
->>>>>>> refs/remotes/origin/SignInAndLogIn-Harveen
     justify-content: center;
     align-items: center;
     justify-self: center;
@@ -119,12 +82,7 @@ h3 {
 
 
 .form_title {
-<<<<<<< HEAD
     margin: 1.3rem;
-=======
-    margin-bottom: 2rem;
-    text-align: center;
->>>>>>> refs/remotes/origin/SignInAndLogIn-Harveen
     color: black;
  }
 
@@ -143,7 +101,6 @@ h3 {
     padding: 10px;
     margin: auto;
 }
-<<<<<<< HEAD
 button{
     padding:5px;
     background-color: rgb(209, 239, 209);
@@ -168,6 +125,3 @@ input, select{
     display: block;
     margin: auto;
 }
-=======
-
->>>>>>> refs/remotes/origin/SignInAndLogIn-Harveen
