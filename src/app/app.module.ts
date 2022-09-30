@@ -6,12 +6,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LogInPageComponent } from './log-in-page/log-in-page.component';
 import { SignInPageComponent } from './sign-in-page/sign-in-page.component';
+import { CompleteComponent } from './components/complete/complete.component';
+import { CompleteListComponent } from './components/complete-list/complete-list.component';
+import { CompleteServiceService } from './services/complete-service.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     LogInPageComponent,
-    SignInPageComponent
+    SignInPageComponent,
+    CompleteComponent,
+    CompleteListComponent
   ],
   imports: [
     BrowserModule,
