@@ -9,6 +9,7 @@
 .main {
     background: linear-gradient(to right, lightgreen, darkgreen);
     height: 100vh;
+    width: 100%;
     background-position: center;
     display: flex;
     justify-content: flex-start; 
@@ -16,16 +17,15 @@
 
 
 
-.container_{
+.container_ {
    border: 3px solid black;
-   width: 50%;
    justify-content: center;
-   width: 400px;
-   max-width: 400px;
-   margin: 1rem;
+   width: 600px;
+   min-height: 400px;
+   margin: 3rem;
    padding: 2rem;
    box-shadow: 0 0 40px black;
-   border-radius: var(--border-radius);
+   border-radius: 25px;
 }
 
 .main_content h1 {
@@ -51,15 +51,24 @@ h3 {
 }
 
 #itemList {
-   border: 2px solid black;
+   border: 2px double white;
+   border-radius: 15px;
    justify-content: center;
    justify-items: center;
 }
 
-.items{
-    justify-content: center;
-    align-self: center;
+#listItem {
+   font-size: 20px;
+   padding: 10px;
+   background-color: linear-gradient(to bottom, rgb(220, 246, 220), rgba(85, 249, 85, 0.499));
+
 }
+
+.items {
+   justify-content: center;
+   justify-items: center;
+}
+
 .editingcontainer {
     box-shadow: 0 0 40px black;
     border-radius: var(--border-radius);
@@ -73,7 +82,6 @@ h3 {
 
 .form_title {
     margin-bottom: 2rem;
-    text-align: center;
     color: black;
  }
 
@@ -83,11 +91,39 @@ h3 {
     margin: auto;
 }
 #add{
-    border: 2px solid black;
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 15px;
     justify-content: center;
-    width: 25%;
+    width: 50%;
     height: 150px;
     padding: 10px;
+    margin: auto;
+}
+
+button{
+    padding:5px;
+    background-color: rgb(209, 239, 209);
+    border: 2px solid white;
+    border-radius: 15px;
+    margin: 10px;
+    font-size: 15px;
+    font-weight:bold ;
+    width: 150px;
+
+}
+
+input, select{ 
+    padding:5px;
+    background-color: rgb(209, 239, 209);
+    border: 2px solid white;
+    border-radius: 15px;
+    font-weight:bold ;
+    font-size: 15px;
+    width: 150px;
+}
+.c{
+    display: block;
     margin: auto;
 }
 

@@ -4,20 +4,8 @@
 <title>Subject Math</title>
 </head>
 <body>
-<nav class="navbar">
-        <a href="/" class="navbar_logo">STDYBUDDY</a>
-      <div class="navbar_toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-    <div class="navbar_menu">
-    <a routerLink="welcomepage" class="navbar_link">Home</a>
-    <a routerLink="Math" class="navbar_link">Subject</a>
-    <a routerLink=""  class="navbar_link">Log Out</a>     
-    </div>    
-    </nav>
 
+<app-nav-bar></app-nav-bar>
     <div class="hero">
         <div class="hero_content">
          <app-homework-component [Subject]="Math"></app-homework-component>       

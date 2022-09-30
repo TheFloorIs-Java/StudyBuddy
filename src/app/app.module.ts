@@ -10,6 +10,7 @@ import { HomeworkComponentComponent } from './homework-component/homework-compon
 import { HomePageComponent } from './home-page/home-page.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { MathComponent } from './math/math.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MathComponent } from './math/math.component';
     HomeworkComponentComponent,
     HomePageComponent,
     WelcomePageComponent,
-    MathComponent
+    MathComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
