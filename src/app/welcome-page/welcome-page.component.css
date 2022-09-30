@@ -8,7 +8,7 @@
 
 .navbar {
     background: linear-gradient(to right, lightgreen, darkgreen);
-    height: 60px;
+    height: 70px;
     padding: 0.5rem calc((100vw - 1200px) / 2);
     display: flex;
     justify-content: space-between;

@@ -6,6 +6,7 @@ import { GlobalServiceService } from '../services/global-service.service';
 import { UserServiceService } from '../services/user-service.service';
 
 
+
 @Component({
   selector: 'app-log-in-page',
   templateUrl: './log-in-page.component.html',
