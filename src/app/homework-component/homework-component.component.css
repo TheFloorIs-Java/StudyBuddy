@@ -37,7 +37,7 @@
 
 h3 {
    display: block;
-   font-size: 1em;
+   font-size: 1.4em;
    font-weight: bold;
 }
 
@@ -55,6 +55,12 @@ h3 {
    border-radius: 15px;
    justify-content: center;
    justify-items: center;
+
+}
+#listItem{
+    font-size: 20px;
+    padding: 10px;
+    background-color: linear-gradient(to bottom, rgb(220, 246, 220), rgba(85, 249, 85, 0.499));
 }
 
 #listItem {
@@ -70,12 +76,14 @@ h3 {
 }
 
 .editingcontainer {
-    box-shadow: 0 0 40px black;
-    border-radius: var(--border-radius);
+    box-shadow: 0 0 40px white;
+    border-radius: 25px;
+    /* border-radius: var(--border-radius); */
     justify-content: center;
     align-items: center;
     justify-self: center;
     justify-items: center;
+
    padding: 10px;
 }
 
@@ -100,7 +108,6 @@ h3 {
     padding: 10px;
     margin: auto;
 }
-
 button{
     padding:5px;
     background-color: rgb(209, 239, 209);
@@ -110,8 +117,8 @@ button{
     font-size: 15px;
     font-weight:bold ;
     width: 150px;
-
 }
+
 
 input, select{ 
     padding:5px;
@@ -126,4 +133,3 @@ input, select{
     display: block;
     margin: auto;
 }
-

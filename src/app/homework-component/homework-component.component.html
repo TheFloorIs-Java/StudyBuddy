@@ -6,19 +6,20 @@
 <body> 
 <div class="main">
     <div class="main_content">
-<h1>Welcome to {{Subject}} {{this.gservice.currentUserName}}</h1>
-<div class="container_">
-    <h2 class="form_title">Homework for {{Subject}}</h2>
-    <div id="itemList">
-        <ul *ngFor ="let hwItemz of  homeworkArray" class="items">
-            <li id="listItem">{{hwItemz.hwItem }}</li>
-        </ul>
-    </div>
+        <h1>Welcome to {{Subject}} {{this.gservice.currentUserName}}</h1>
+        <div class="container_">
+            <h2 class="form_title">Homework for {{Subject}}</h2>
+             <div id="itemList">
+                <ul *ngFor ="let hwItemz of  homeworkArray" class="items">
+                    <li id="listItem">{{hwItemz.hwItem }}</li>
+                </ul>
+            </div>
+            
 
     <p></p>
 
-    <div class="editingcontainer">
-        <div id="completed">
+    <div class="editingcontainer" >
+        <div id="completed" >
             <h3 class="form_title">Select Item Completed Below:</h3>
             <select [(ngModel)]="itemCompleted"  placeholder="Select Homework">
                 <option *ngFor ="let hwItemz of homeworkArray" > {{hwItemz.hwItem}}</option>
@@ -30,11 +31,10 @@
             <div class="c">
             <input type="text" [(ngModel)]="addNewItem" class="form_input" placeholder="Homework Item" />
             <button class="log_button" (click)="addItemToHomework()" class="centerThis" >Add To Homework</button>
-
+        </div>
         </div>
     </div>
     </div>
     <h4 class="title">{{message}}</h4>
-</div>
 </div>
 </div>
