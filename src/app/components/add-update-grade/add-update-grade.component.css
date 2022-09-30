@@ -1,0 +1,40 @@
+div {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+select,
+input,
+button {
+    margin: 2px;
+    padding: 3px;
+}
+
+select {
+    border: none;
+    border-bottom: 1px solid rgb(31, 31, 31);
+}
+
+select:focus {
+    outline-width: 0;
+}
+
+input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(31, 31, 31);
+}
+
+input:focus {
+    outline-width: 0;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background-color: rgb(94, 172, 87);
+    box-shadow: 1px 1px 3px rgb(148, 148, 148);
+    color: white;
+    font-weight: bold;
+}

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GradesComponent } from './grades.component';
+import { AddUpdateGradeComponent } from './add-update-grade.component';
 
-describe('GradesComponent', () => {
-  let component: GradesComponent;
-  let fixture: ComponentFixture<GradesComponent>;
+describe('AddGradeComponent', () => {
+  let component: AddUpdateGradeComponent;
+  let fixture: ComponentFixture<AddUpdateGradeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GradesComponent ]
+      declarations: [ AddUpdateGradeComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(GradesComponent);
+    fixture = TestBed.createComponent(AddUpdateGradeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

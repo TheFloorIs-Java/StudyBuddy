@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class GlobalService {
   //this this going to be used to declare the global user that is signed in 
   currentUserName : string="";
-  // currentUserId : number = 0;
+  currentUserId : number = 1;
 //this is going to prove if someone is logged in
 
 private loggedIn : boolean;

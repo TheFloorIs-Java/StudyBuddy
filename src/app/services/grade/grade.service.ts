@@ -1,8 +1,8 @@
+import { subject } from 'src/app/model/subject';
 import { GlobalService } from './../global/global.service';
-import { user } from './../../model/user';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { map, Observable, VirtualTimeScheduler } from 'rxjs';
 import { grade } from 'src/app/model/grade';
 
 @Injectable({
@@ -11,28 +11,26 @@ import { grade } from 'src/app/model/grade';
 export class GradeService {
 
   constructor(private http: HttpClient, private gbservice: GlobalService) { 
-    // this.getGrades().subscribe(data => this.allGrades = data);
     }
-  allGrades: Array<grade> = [];
-  
-  // GET ALL GRADES
-  getGrades(): Observable<Array<grade>> {
+  // GET ALL GRADES PER USER  
+  getGrades() : Observable<Array<grade>>{
     return this.http.get<Array<grade>>(
-      "https://632cb92f519d17fb53b2cfb1.mockapi.io/grade/");
+      "http://localhost:8000/grades/" + this.gbservice.currentUserId);
   }
+  // GET ALL GRADES PER USER  
+    // getGrades() : Observable<Array<grade>>{
+    //   return this.http.get<Array<grade>>(
+    //     "https://632cb92f519d17fb53b2cfb1.mockapi.io/grade/"
+    //   ).pipe(map((response) => response.filter(response => response.userId == this.gbservice.currentUserId)));
+    // }
 
-  // GET GRADES BY USERID
-  // BROKEN
-  /* getGradesByUserId(userId:number) {
-    return this.http.get<Array<grade>> (
-          "https://632cb92f519d17fb53b2cfb1.mockapi.io/grade/" + userId
-        ).subscribe(data => userId = data.userId)
-  }
-  */
+  // ADD SUBJECT + ADD GRADES
+    addGrades(subjectId: number, grade:number) : void {
+      if(subjectId === subjectId){ console.log("ERROR!")}
+      this.http.post<any>( "http://localhost:8000/grades", {userId:this.gbservice.currentUserId, subjectId:subjectId, grade:grade}).subscribe(response => console.log(response))
+    } 
 
-  // getGradesByUser(userId: number){
-  // this.userGrades = new Array<string>;
-  // for(let i=0; i<this.allGrades.length; i++){
-  //   if(this.allGrades[i].userId == this.gbservice.currentUserId && this.allGrades[i].grade==userId){this.userGrades.push(this.allGrades[i].userId)}
-  // }
+  // UPDATE
+    // update(gradeId:)
 }
+
