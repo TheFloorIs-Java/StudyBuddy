@@ -8,6 +8,9 @@ import { CompleteServiceService } from 'src/app/services/complete-service.servic
   styleUrls: ['./complete.component.css']
 })
 export class CompleteComponent implements OnInit {
+uploadComplete() {
+throw new Error('Method not implemented.');
+}
   
   @Input()
   CompleteHomework: complete = {
