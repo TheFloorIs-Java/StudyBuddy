@@ -1,27 +1,42 @@
-<h2>Welcome to {{Subject}} {{this.gservice.currentUserName}}</h2>
-<div id="entireHomework">
-    <h2 id="homeworkTitle" class="title">Homework for {{Subject}}</h2>
-    <div id="itemList">
-        <ul *ngFor ="let hwItemz of  homeworkArray" class="items">
-            <li id="listItem">{{hwItemz.hwItem }}</li>
-        </ul>
-    </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Welcome to {{Subject}} {{this.gservice.currentUserName}}</title>
+</head>
+<body> 
+<div class="main">
+    <div class="main_content">
+        <h1>Welcome to {{Subject}} {{this.gservice.currentUserName}}</h1>
+        <div class="container_">
+            <h2 class="form_title">Homework for {{Subject}}</h2>
+             <div id="itemList">
+                <ul *ngFor ="let hwItemz of  homeworkArray" class="items">
+                    <li id="listItem">{{hwItemz.hwItem }}</li>
+                </ul>
+            </div>
+            
 
     <p></p>
 
-    <div id="editingList">
-        <div id="completed">
-            <h3 class="title">Select Item Completed Below:</h3>
-            <select [(ngModel)]="itemCompleted" class="centerThis" placeholder="Select Homework">
+    <div class="editingcontainer" >
+        <div id="completed" >
+            <h3 class="form_title">Select Item Completed Below:</h3>
+            <div class="c">
+            <select [(ngModel)]="itemCompleted"  placeholder="Select Homework">
                 <option *ngFor ="let hwItemz of homeworkArray" > {{hwItemz.hwItem}}</option>
             </select>
-            <button class="centerThis" (click)="complete()">Completed</button>
+            <button class="log_button" (click)="complete()">Completed</button>
         </div>
-        <div id="add">
-            <h3 class="title"> Add New Homework Item Below:</h3>
-            <input type="text" [(ngModel)]="addNewItem" class="centerThis" placeholder="Homework Item" />
-            <button (click)="addItemToHomework()" class="centerThis" >Add To Homework</button>
+        </div>
+        <div class="form_input-group" >
+            <h3 class="form_title"> Add New Homework Item Below:</h3>
+            <div class="c">
+            <input type="text" [(ngModel)]="addNewItem" class="form_input" placeholder="Homework Item" />
+            <button class="log_button" (click)="addItemToHomework()" class="centerThis" >Add To Homework</button>
+        </div>
         </div>
     </div>
     <h4 class="title">{{message}}</h4>
+</div>
+</div>
 </div>

@@ -1,50 +1,128 @@
-#entireHomework{
-    border: 3px solid black;
-    width: 50%;
-    justify-content: center;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+
+    scroll-behavior: smooth;
+
 }
-.title{
-    text-align: center;
-}
-.centerThis{
+
+.main {
+    background: linear-gradient(to right, lightgreen, darkgreen);
+    height: 100vh;
+    width: 100%;
+    background-position: center;
     display: flex;
+    justify-content: flex-start; 
+}
+
+
+.container_{
+   border: 3px solid black;
+   justify-content: center;
+   width: 600px;
+min-height: 400px;
+   margin: 3rem;
+   padding: 2rem;
+   box-shadow: 0 0 40px black;
+   border-radius: 25px;
+   /* border-radius: var(--border-radius); */
+   /* background: linear-gradient(to bottom, rgb(220, 246, 220), rgba(85, 249, 85, 0.499)); */
+}
+
+.main_content h1 {
+    font-size: clamp(1rem, 3vw, 2rem );
+    padding: 3rem 1rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+   display: block;
+   font-size: 1.4em;
+   font-weight: bold;
+}
+
+.centerThis{
     justify-content: center;
     justify-items: center;
     align-self: center;
     justify-self: center;
+    width: auto;
+    box-sizing: border-box;
 }
-#itemList{
-   border: 2px solid black;
+
+#itemList {
+   border: 2px double white;
+   border-radius: 15px;
    justify-content: center;
    justify-items: center;
-    align-items: center;
-    width: 50%;
-    margin: auto;
+
 }
+#listItem{
+    font-size: 20px;
+    padding: 10px;
+    background-color: linear-gradient(to bottom, rgb(220, 246, 220), rgba(85, 249, 85, 0.499));
+}
+
 .items{
     justify-content: center;
     align-self: center;
 }
-#editingList{
-    display: flex;
+.editingcontainer {
+    box-shadow: 0 0 40px white;
+    border-radius: 25px;
+    /* border-radius: var(--border-radius); */
     justify-content: center;
     align-items: center;
     justify-self: center;
     justify-items: center;
+
    padding: 10px;
 }
+
+
+.form_title {
+    margin: 1.3rem;
+    color: black;
+ }
+
+
 #completed{
-    border: 2px solid black;
-    width: 25%;
+    height: 100px;
+    margin: auto;
+}
+#add{
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 15px;
+    justify-content: center;
+    width: 50%;
     height: 150px;
     padding: 10px;
     margin: auto;
 }
-#add{
-    border: 2px solid black;
-    justify-content: center;
-    width: 25%;
-    height: 150px;
-    padding: 10px;
+button{
+    padding:5px;
+    background-color: rgb(209, 239, 209);
+    border: 2px solid white;
+    border-radius: 15px;
+    margin: 10px;
+    font-size: 15px;
+    font-weight:bold ;
+    width: 150px;
+
+}
+input, select{ 
+    padding:5px;
+    background-color: rgb(209, 239, 209);
+    border: 2px solid white;
+    border-radius: 15px;
+    font-weight:bold ;
+    font-size: 15px;
+    width: 150px;
+}
+.c{
+    display: block;
     margin: auto;
 }
