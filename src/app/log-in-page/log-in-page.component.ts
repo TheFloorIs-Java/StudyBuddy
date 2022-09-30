@@ -12,8 +12,8 @@ import { UserServiceService } from '../services/user-service.service';
   styleUrls: ['./log-in-page.component.css']
 })
 export class LogInPageComponent implements OnInit {
-
-
+    
+  subIn : string= "History";
   username: string ="";
   password: any ="";
   message : string = "";

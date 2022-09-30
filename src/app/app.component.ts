@@ -1,3 +1,5 @@
+import { subject } from './model/tips';
+import { TipServiceService } from './services/tip-service.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,5 +9,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'StudyBuddy';
-  
-}
+  constructor(private  TipServiceService: TipServiceService){
+
+  }
+  ngOnInit(){
+    this.TipServiceService.getAllTips().subscribe(
+
+    data=>console.log(data));
+
+    }
+    
+  }
+
