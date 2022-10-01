@@ -49,14 +49,7 @@ complete(){
         this.homeworkArray.splice(i,1);
       }
     }
-    this.addFun();
-    this.addFun();
-    this.addFun();
 }
-}
-addFun(){
-  this.c.uploadComplete();
-
 }
 
 //adds and refreshes

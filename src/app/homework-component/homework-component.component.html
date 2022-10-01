@@ -20,10 +20,12 @@
     <div class="editingcontainer" >
         <div id="completed" >
             <h3 class="form_title">Select Item Completed Below:</h3>
+            <div class="c">
             <select [(ngModel)]="itemCompleted"  placeholder="Select Homework">
                 <option *ngFor ="let hwItemz of homeworkArray" > {{hwItemz.hwItem}}</option>
             </select>
             <button class="log_button" (click)="complete()" >Completed</button>
+        </div>
         </div>
         <div class="form_input-group">
             <h3 class="form_title"> Add New Homework Item Below:</h3>
