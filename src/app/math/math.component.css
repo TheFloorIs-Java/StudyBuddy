@@ -100,6 +100,8 @@
 
 .hero {
     background:  linear-gradient(to right, lightgreen, darkgreen);
+    display: flex;
+    flex-direction:column;
     /* height: 100vh; */
     /* background-position: center;
     background-size: cover;
@@ -108,3 +110,37 @@
     justify-content: flex-start; */
        
 }
+#tips{
+    display: flex;
+    flex-direction:row;
+    width: 100%;
+
+}
+.hero_content{
+    display: flex;
+    flex-direction:column;
+    float:inline-start;
+
+}
+.comp{
+    display: flex;
+flex-direction: column;
+width: 100%;
+
+}
+.new{
+    display: flex;
+    flex-direction: row;
+}
+#titles{
+    display: flex;
+    justify-content: center;
+    border: 15px double white;
+    border-radius: 25px;
+    background-color: rgba(214, 255, 223, 0.689);
+    padding: 20px;
+    font-size: 45px;
+    font-weight: bolder;
+    width: 100%;
+}
+

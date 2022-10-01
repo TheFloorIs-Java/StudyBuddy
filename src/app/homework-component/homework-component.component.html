@@ -6,9 +6,8 @@
 <body> 
 <div class="main">
     <div class="main_content">
-        <h1>Welcome to {{Subject}} {{this.gservice.currentUserName}}</h1>
         <div class="container_">
-            <h2 class="form_title">Homework for {{Subject}}</h2>
+            <h2 >Homework for {{Subject}}</h2>
              <div id="itemList">
                 <ul *ngFor ="let hwItemz of  homeworkArray" class="items">
                     <li id="listItem">{{hwItemz.hwItem }}</li>
@@ -27,7 +26,7 @@
             <button class="log_button" (click)="complete()" >Completed</button>
         </div>
         <div class="form_input-group">
-            <h3 class="form"> Add New Homework Item Below:</h3>
+            <h3 class="form_title"> Add New Homework Item Below:</h3>
             <div class="c">
             <input type="text" [(ngModel)]="addNewItem" class="form_input" placeholder="Homework Item" />
             <button class="log_button" (click)="addItemToHomework()" class="centerThis" >Add To Homework</button>
@@ -35,6 +34,5 @@
         </div>
     </div>
     </div>
-    <h4 class="title">{{message}}</h4>
 </div>
 </div>

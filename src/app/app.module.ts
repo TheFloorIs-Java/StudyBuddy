@@ -11,6 +11,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { MathComponent } from './math/math.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { TipsComponent } from './tips/tips.component';
+import { CompleteComponent } from './complete/complete.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     HomePageComponent,
     WelcomePageComponent,
     MathComponent,
-    NavBarComponent
+    NavBarComponent,
+    TipsComponent,
+    CompleteComponent
   ],
   imports: [
     BrowserModule,

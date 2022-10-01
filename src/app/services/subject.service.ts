@@ -33,13 +33,8 @@ getSubjectById(id : number) : string {
   return "Math";
 }
 getSubjectByName(name : string) : number {
-this.getAllSubjects();
-this.getAllSubjects();
-this.getAllSubjects();
-this.getAllSubjects();
   for(let i =0; i< this.allSubjects.length; i++){
     if(this.allSubjects[i].subjectName==name){
-      console.log("Im goina my mo")
       return this.allSubjects[i].subjectId;
     }
   }

@@ -6,9 +6,19 @@
 <body>
 
 <app-nav-bar></app-nav-bar>
+
     <div class="hero">
+    
         <div class="hero_content">
-         <app-homework-component [Subject]="Math"></app-homework-component>    
+          <div class="new">
+          <div id="titles">Welcome to Math {{this.gservice.currentUserName}}</div>
+          <app-tips [Subject]="Math" id="tips"></app-tips>
+        </div>
+          <div class="new">
+
+         <app-homework-component class="comp" [Subject]="Math"></app-homework-component> 
+         <app-complete class="comp" [SubjectNum]="mathNum" [Subject]="Math"></app-complete>
+         </div>
          </div>
     </div>
 
