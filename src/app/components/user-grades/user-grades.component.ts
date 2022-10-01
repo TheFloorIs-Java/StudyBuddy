@@ -1,8 +1,8 @@
+import { subject } from 'src/app/model/subject';
+import { SubjectService } from 'src/app/services/subject/subject.service';
 import { HttpClient } from '@angular/common/http';
-import { subject } from '../../model/subject';
 import { Component, Input, OnInit } from '@angular/core';
 import { grade } from 'src/app/model/grade';
-import { GlobalService } from 'src/app/services/global/global.service';
 import { GradeService } from 'src/app/services/grade/grade.service';
 
 
@@ -11,34 +11,29 @@ import { GradeService } from 'src/app/services/grade/grade.service';
   templateUrl: './user-grades.component.html',
   styleUrls: ['./user-grades.component.css']
 })
-export class ReportCardComponent implements OnInit {
+export class UserGradesComponent implements OnInit {
 
   @Input()
   subjectId: number = 0;
-  subjectType: string = "subject";
+  subjectName: string = "";
 
   @Input()
-  grade : number = 0;
+  grade: number = 0;
 
   userGrades: Array<grade> = [];
 
-  constructor(private http : HttpClient, private gservice: GradeService, private gbservice: GlobalService) { }
+  constructor(private http: HttpClient, private gservice: GradeService, private sservice: SubjectService) { }
 
   ngOnInit(): void {
-    // Shows ALL grades of USER
-    this.gservice.getGrades().subscribe(data => {this.userGrades = data;
-    console.log(data)});}
+    this.gservice.getGrades().subscribe(data => this.userGrades = data);
 
-    //this translates the subjectID to subjectType
-    // this.http.get<subject> ("https://632cb92f519d17fb53b2cfb1.mockapi.io/subjects/" + this.subjectId).subscribe(data => this.subjectType = data.subjectType);
+    //ID TO NAME
+    //LINK TO GETSUBECTBYID http://localhost:8000/subjects/ID/{ID}
+    this.http.get <subject> ("http://localhost:8000/subjects/id/" + this.subjectId).subscribe(data => {this.subjectName = data.subjectName; console.log(this.subjectName)})
   }
 
-// TRYING TO GET IT INTO SERVICE - DOES NOT WORK
-  // constructor(private sservice : SubjectService) { }
-  // ngOnInit(): void {
-  //   this.sservice.getSubjectsById(this.subjectID)
-  //   this.sservice.getSubjects().subscribe(data => console.log(data));
-  // }
+
+}
 
 
-  
+

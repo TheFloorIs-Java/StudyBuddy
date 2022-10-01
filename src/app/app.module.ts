@@ -6,8 +6,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LogInPageComponent } from './log-in-page/log-in-page.component';
 import { SignInPageComponent } from './sign-in-page/sign-in-page.component';
-import { ReportCardComponent } from './components/user-grades/user-grades.component';
-import { GradesComponent } from './components/report-card/report-card.component';
+import { UserGradesComponent } from './components/user-grades/user-grades.component';
+import { ReportCardComponent } from './components/report-card/report-card.component';
 import { AddGradeComponent } from './components/add-update-grade/add-update-grade.component';
 
 @NgModule({
@@ -16,7 +16,7 @@ import { AddGradeComponent } from './components/add-update-grade/add-update-grad
     LogInPageComponent,
     SignInPageComponent,
     ReportCardComponent,
-    GradesComponent,
+    UserGradesComponent,
     AddGradeComponent
   ],
   imports: [

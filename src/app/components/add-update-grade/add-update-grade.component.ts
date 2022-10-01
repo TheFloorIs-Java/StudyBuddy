@@ -1,6 +1,4 @@
-import { subject } from 'src/app/model/subject';
 import { Component, Input, OnInit } from '@angular/core';
-import { NgModel } from '@angular/forms';
 import { GlobalService } from 'src/app/services/global/global.service';
 import { GradeService } from 'src/app/services/grade/grade.service';
 import { grade } from 'src/app/model/grade';
@@ -13,29 +11,67 @@ import { grade } from 'src/app/model/grade';
 export class AddGradeComponent implements OnInit {
 
   gradeArray: Array<grade> = [];
+
+  modifyGrade: grade = {
+    gradeId: 0,
+    userId: 0,
+    subjectId: 0,
+    grade: 0
+  };
+
   @Input()
   subjectId: number = 0;
-  subjectIdInput: number = this.subjectId;
 
   @Input()
   grade: number = 0;
 
-  constructor(private gservice: GradeService, private gbservice: GlobalService) { }
 
+
+  constructor(private gservice: GradeService) { }
+
+  //DISPLAY ALL GRADES OF THE USER ON LOAD
   ngOnInit(): void {
     this.gservice.getGrades().subscribe(data => this.gradeArray = data);
   }
 
-  add(): void {
-    let dropdown = <HTMLSelectElement>document.getElementById("subjectId");
-    let subjectIdInput = Number(dropdown.value);
+  //TO REFRESH WINDOW
+  refresh(): void {location.reload()}
 
-    //IF SUBJECT ID ALREADY EXISTS, IT SHOULD NOT BE ABLE TO ADD
-    if (this.gradeArray.filter(data => { console.log(data.subjectId + "!"); data.subjectId })) { console.log("!") }
-    console.log((subjectIdInput));
+  //ADD SUBJECT AND GRADE VIA DROP DOWN
+  add(): void {
+    //SELECTING THE DROP DOWN FROM HTML
+    let dropdown = <HTMLSelectElement>document.getElementById("subjectId");
+    //GRABBING THE VALUE OF THE DROP DOWN
+    let subjectIdInput = Number(dropdown.value);
+    //RUNS THROUGH THE ARRAY OF GRADES TO SEE IF THERE ARE ANY MATCHING subjectID, IF EXISTS IT WILL DISPLAY AN ERROR MESSAGE
     this.gservice.addGrades(subjectIdInput, this.grade);
+    for (let i = 0; i < this.gradeArray.length; i++)
+      if (this.gradeArray[i].subjectId == this.subjectId) {
+        let error = <HTMLDivElement>document.getElementById("error");
+        let errMess = document.createElement("p");
+        errMess.innerText = "Subject Already Exists"
+        error.appendChild(errMess);
+        // setInterval(() => this.refresh(), 1000);
+      } 
 
   }
+
+  //this is actively looking up the gradeId while user is picking subject
+  lookUpGradeId(): void {
+    let dropdown = <HTMLSelectElement>document.getElementById("subjectId");
+    let subjectIdInput = Number(dropdown.value);
+    this.gservice.getGradeId(subjectIdInput).subscribe(response => { this.modifyGrade = response; console.log(response) })
+  }
+
+  // UPDATE EXISTING GRADE
+  update(): void {
+    let dropdown = <HTMLSelectElement>document.getElementById("subjectId");
+    let subjectIdInput = Number(dropdown.value);
+    this.gservice.getGradeId(subjectIdInput).subscribe(response => { this.modifyGrade = response; console.log(response) })
+    this.gservice.update(this.modifyGrade.gradeId, subjectIdInput, this.grade);
+  }
+
+
 
 
 }

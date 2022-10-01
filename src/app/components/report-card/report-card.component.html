@@ -4,6 +4,11 @@
         <h3 id="subject">Subject</h3>
         <h3 id="grade">Grade</h3>
     </div>
-    <app-user-grades></app-user-grades>
+    <div *ngFor= "let grade of userGrades">
+        <app-user-grades 
+        [subjectId]= "grade.subjectId" 
+        [grade]= "grade.grade"></app-user-grades>
+    </div>
     <app-add-update-grade></app-add-update-grade>
+
 </div>

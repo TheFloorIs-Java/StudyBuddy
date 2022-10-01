@@ -2,8 +2,13 @@ div {
     display: flex;
     flex-direction: column;
     padding: 5px;
+    
 }
 
+#error{
+    font-family: sans-serif;
+    font-size: small;
+}
 select,
 input,
 button {

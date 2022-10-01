@@ -1,21 +1,27 @@
-import { grade } from '../../model/grade';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { grade } from 'src/app/model/grade';
 import { GradeService } from 'src/app/services/grade/grade.service';
-
-import { GlobalService } from 'src/app/services/global/global.service';
 
 @Component({
   selector: 'app-report-card',
   templateUrl: './report-card.component.html',
   styleUrls: ['./report-card.component.css']
 })
-export class GradesComponent implements OnInit {
+export class ReportCardComponent implements OnInit {
+  @Input()
+  subjectId: number = 0;
+  subjectName: string = "";
+
+  @Input()
+  grade: number = 0;
+
+  userGrades: Array<grade> = [];
  
- 
-  constructor(){}
+  constructor(private gservice: GradeService){}
 
   ngOnInit(): void {
-    
+    this.gservice.getGrades().subscribe(data => this.userGrades = data);
+
   }
   
 }  

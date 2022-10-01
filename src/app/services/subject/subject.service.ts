@@ -1,34 +1,36 @@
-import { map } from 'rxjs/internal/operators/map';
-import { subject } from 'src/app/model/subject';
+
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { subject } from 'src/app/model/subject';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SubjectService {
-  
 
-  // subjectID: number = 0;
-  // subject: string = "subject";
+  allSubjects: Array<subject> = [
+    { subjectId: 1, subjectName: "Math", tips: "none" },
+    { subjectId: 2, subjectName: "Science", tips: "none" },
+    { subjectId: 3, subjectName: "English", tips: "none" },
+    { subjectId: 4, subjectName: "History", tips: "none" },
+    { subjectId: 5, subjectName: "Artist", tips: "none" },
+    { subjectId: 6, subjectName: "Music", tips: "none" }];
 
-  constructor(private http: HttpClient) { }
-  
-  allSubjects: Array<subject> = [];
-
-  // Gets all the Subject Types
-  getAllSubjects() : Observable<Array<subject>> {
-    return this.http.get<Array<subject>>("https://632cb92f519d17fb53b2cfb1.mockapi.io/subjects/");
+  constructor(private http: HttpClient) {
+    this.getAllSubjects().subscribe(data => this.allSubjects = data);
   }
 
-
-  getSubjectsById(subjectID: number) : Observable<subject[]> {
-    
-    return this.http.get<subject[]>(
-      "https://632cb92f519d17fb53b2cfb1.mockapi.io/subjects/" + subjectID
-    )
+  getAllSubjects(): Observable<Array<subject>> {
+    // this.http.get<Array<subject>>("http://localhost:8000/subjects").subscribe(data=> this.allSubjects=data)
+    return this.http.get<Array<subject>>("http://localhost:8000/subjects");
+  }
+  getSubjectById(id: number): string {
+    for (let i = 0; i < this.allSubjects.length; i++) {
+      if (this.allSubjects[i].subjectId == id) {
+        return this.allSubjects[i].subjectName;
+      }
+    }
+    return "Math";
   }
 }
-
-// .subscribe(data => console.log(data.toString()));

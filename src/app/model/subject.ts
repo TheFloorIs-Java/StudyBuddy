@@ -1,4 +1,5 @@
 export interface subject {
-    subjectID : number;
-    subjectType : string; 
-}
+    subjectId : number;
+    subjectName: string;
+    tips: string;
+ }
