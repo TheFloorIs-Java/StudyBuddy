@@ -11,7 +11,7 @@ const routes: Routes = [{path: '',component: HomePageComponent },
 {path: 'signIn',component: SignInPageComponent } ,
 {path: 'LoginPage',component: LogInPageComponent },
 { path: 'welcomepage', component: WelcomePageComponent, 
-  canActivate : [AuthGuardServiceService] },
+   },
   { path: 'welcomepage/Math', component: MathComponent, 
   canActivate : [AuthGuardServiceService] }];
 

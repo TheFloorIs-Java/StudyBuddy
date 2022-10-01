@@ -16,17 +16,16 @@
 }
 
 
-.container_{
+
+.container_ {
    border: 3px solid black;
    justify-content: center;
    width: 600px;
-min-height: 400px;
+   min-height: 400px;
    margin: 3rem;
    padding: 2rem;
    box-shadow: 0 0 40px black;
    border-radius: 25px;
-   /* border-radius: var(--border-radius); */
-   /* background: linear-gradient(to bottom, rgb(220, 246, 220), rgba(85, 249, 85, 0.499)); */
 }
 
 .main_content h1 {
@@ -64,10 +63,18 @@ h3 {
     background-color: linear-gradient(to bottom, rgb(220, 246, 220), rgba(85, 249, 85, 0.499));
 }
 
-.items{
-    justify-content: center;
-    align-self: center;
+#listItem {
+   font-size: 20px;
+   padding: 10px;
+   background-color: linear-gradient(to bottom, rgb(220, 246, 220), rgba(85, 249, 85, 0.499));
+
 }
+
+.items {
+   justify-content: center;
+   justify-items: center;
+}
+
 .editingcontainer {
     box-shadow: 0 0 40px white;
     border-radius: 25px;
@@ -82,7 +89,7 @@ h3 {
 
 
 .form_title {
-    margin: 1.3rem;
+    margin-bottom: 2rem;
     color: black;
  }
 
@@ -110,8 +117,9 @@ button{
     font-size: 15px;
     font-weight:bold ;
     width: 150px;
-
 }
+
+
 input, select{ 
     padding:5px;
     background-color: rgb(209, 239, 209);
