@@ -49,6 +49,7 @@ complete(){
         this.homeworkArray.splice(i,1);
       }
     }
+    this.itemCompleted!=""
 }
 }
 
