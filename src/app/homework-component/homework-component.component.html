@@ -25,7 +25,7 @@
             <select [(ngModel)]="itemCompleted"  placeholder="Select Homework">
                 <option *ngFor ="let hwItemz of homeworkArray" > {{hwItemz.hwItem}}</option>
             </select>
-            <button class="log_button" (click)="complete()">Completed</button>
+            <button class="log_button" (click)="complete()" >Completed</button>
         </div>
         </div>
         <div class="form_input-group" >
