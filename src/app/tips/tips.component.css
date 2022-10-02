@@ -1,0 +1,9 @@
+#tip{
+    /* border: 15px double white; */
+    padding: 10px;
+    text-align: center;
+    font-size: 10px;
+    border-radius: 20px;
+    color: black;
+    /* background-color: rgba(214, 255, 223, 0.689); */
+}

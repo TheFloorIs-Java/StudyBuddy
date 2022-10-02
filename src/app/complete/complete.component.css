@@ -1,0 +1,58 @@
+
+h3{
+    color: black;
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-bottom: 5px;
+    margin: 10px;
+}
+.div{
+
+    border-radius: 20px;
+    padding :10px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+body{
+    margin:0px;
+}
+.ul{
+    border: 5px double white;
+    border-radius: 20px;
+    padding :5px;
+    background-color: rgb(209, 239, 209);
+     margin-left: 10%;
+   margin-right: 10%;
+}
+li{
+    padding :5px;
+    font-size: 14px;
+}
+
+
+button{
+    padding:7px;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 13px;
+    width: 150px;
+    cursor: pointer;
+    border: none;
+    background-color: black;
+    box-shadow: 1px 1px 3px rgb(148, 148, 148);
+    color: white;
+    font-weight: bold;
+}
+#buttonCenter{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    justify-self: center;
+}

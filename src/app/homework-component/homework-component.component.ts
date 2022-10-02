@@ -5,8 +5,11 @@ import { HomeworkServiceService } from '../services/homework-service.service';
 import {  Router } from '@angular/router';
 import { AuthGuardServiceService } from '../services/auth-guard-service.service';
 import { Observable } from 'rxjs';
+import { CompleteComponent } from '../complete/complete.component';
+import { CompleteServiceService } from '../services/complete-service.service';
 
 @Component({
+  providers:[CompleteComponent ],
   selector: 'app-homework-component',
   templateUrl: './homework-component.component.html',
   styleUrls: ['./homework-component.component.css']
@@ -14,9 +17,8 @@ import { Observable } from 'rxjs';
 export class HomeworkComponentComponent implements OnInit {
   homeworkArray : Array<homework> = [];
   constructor(public gservice :GlobalServiceService,
-     private hservice : HomeworkServiceService) {
-     // this.hservice.getHwForSubject(this.Subject).subscribe(data=>this.homeworkArray=data);
-     }
+     private hservice : HomeworkServiceService, private c : CompleteComponent,
+     private cservice: CompleteServiceService) {}
 
 
   
@@ -41,15 +43,16 @@ public trackHw(index: number, item: homework): string{
 
 complete(){
   if(this.itemCompleted!=""){
-    this.message = this.itemCompleted + " will be added to complete when completed";
     this.hservice.deleteHwItem(this.itemCompleted);
     for(let i =0; i<this.homeworkArray.length; i++){
       if(this.homeworkArray[i].hwItem==this.itemCompleted){
         this.homeworkArray.splice(i,1);
       }
-    } 
+    }
+    this.itemCompleted!=""
 }
 }
+
 //adds and refreshes
 addItemToHomework(){
   if(this.addNewItem!=""){
@@ -57,6 +60,7 @@ addItemToHomework(){
   this.homeworkArray.push({userId: this.gservice.currentUserId, subjectId: 0, hwId: 0, hwItem: this.addNewItem});
   this.addNewItem="";
   }
+
 }
 
 

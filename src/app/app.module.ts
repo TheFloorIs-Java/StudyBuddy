@@ -11,6 +11,11 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { MathComponent } from './math/math.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { TipsComponent } from './tips/tips.component';
+import { CompleteComponent } from './complete/complete.component';
+import { AddUpdateGradeComponent } from './add-update-grade/add-update-grade.component';
+import { ReportCardComponent } from './report-card/report-card.component';
+import { UserGradesComponent } from './user-grades/user-grades.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +26,12 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     HomePageComponent,
     WelcomePageComponent,
     MathComponent,
-    NavBarComponent
+    NavBarComponent,
+    TipsComponent,
+    CompleteComponent,
+    AddUpdateGradeComponent,
+    ReportCardComponent,
+    UserGradesComponent
   ],
   imports: [
     BrowserModule,

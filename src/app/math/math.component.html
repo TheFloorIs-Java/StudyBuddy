@@ -6,10 +6,50 @@
 <body>
 
 <app-nav-bar></app-nav-bar>
+
     <div class="hero">
+    
         <div class="hero_content">
-         <app-homework-component [Subject]="Math"></app-homework-component>    
+          <div class="new">
+          <div id="titles">Welcome to Math {{this.gservice.currentUserName}}</div>
+          <app-tips [Subject]="Math" id="tips"></app-tips>
+        </div>
+          <div class="new">
+            <app-report-card class="comp" ></app-report-card>
+            <app-homework-component class="comp" [Subject]="Math"></app-homework-component> 
+            <app-complete class="comp" [SubjectNum]="mathNum" [Subject]="Math"></app-complete>
+         </div>
          </div>
     </div>
+
+    <div class="footer_container">
+      <div class="footer_links">
+          <div class="footer_link--wrapper">
+              <div class="footer_link--items">
+                  <h2>About Us</h2>
+                  <a routerLink="/">How Stdybuddy Works?</a>
+                  <a routerLink="/">Careers</a>
+                  <a routerLink="/">Investments</a>
+                  <a routerLink="/">Terms of Servce</a>
+              </div>
+              <div class="footer_link--items">
+                  <h2>Contact Us</h2>
+                  <a routerLink="/">Contact School District</a>
+                  <a routerLink="/">Support</a>
+                  <a routerLink="/">Sign Up To Tutor!</a>
+                  <a routerLink="/">Locations</a>
+              </div>
+          </div>
+          <div class="footer_link--wrapper">
+              <div class="footer_link--items">
+                  <h2>Assitance</h2>
+                  <a routerLink="/">Need a Tutor</a>
+                  <a routerLink="/">Tips for College</a>
+                  <a routerLink="/">School Counselors</a>
+                  <a routerLink="/">Courses</a>
+              </div>
+          </div>
+      </div>
+  </div>
 
 </body>
