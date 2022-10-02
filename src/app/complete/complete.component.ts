@@ -10,6 +10,7 @@ import { GlobalServiceService } from '../services/global-service.service';
 })
 export class CompleteComponent implements OnInit {
 
+
   completehomework : Array<complete> = [];
 
   constructor( private cservice : CompleteServiceService, private gservice: GlobalServiceService) { }

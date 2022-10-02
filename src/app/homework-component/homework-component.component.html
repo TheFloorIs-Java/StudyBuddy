@@ -21,18 +21,18 @@
         <div id="completed" >
             <h3 class="form_title">Select Item Completed Below:</h3>
             <div class="c">
-            <select [(ngModel)]="itemCompleted"  placeholder="Select Homework">
-                <option *ngFor ="let hwItemz of homeworkArray" > {{hwItemz.hwItem}}</option>
-            </select>
-            <button class="log_button" (click)="complete()" >Completed</button>
-        </div>
+                <select [(ngModel)]="itemCompleted"  placeholder="Select Homework">
+                    <option *ngFor ="let hwItemz of homeworkArray" > {{hwItemz.hwItem}}</option>
+                </select>
+                <button class="log_button" (click)="complete()" >Completed</button>
+            </div>
         </div>
         <div class="form_input-group">
-            <h3 class="form_title"> Add New Homework Item Below:</h3>
+            <h3 class="form_title" id="upIt"> Add New Homework Item Below:</h3>
             <div class="c">
-            <input type="text" [(ngModel)]="addNewItem" class="form_input" placeholder="Homework Item" />
-            <button class="log_button" (click)="addItemToHomework()" class="centerThis" >Add To Homework</button>
-        </div>
+                <input type="text" [(ngModel)]="addNewItem" class="form_input" placeholder="Homework Item" />
+                <button class="log_button" (click)="addItemToHomework()" class="centerThis" >Add To Homework</button>
+            </div>
         </div>
     </div>
     </div>

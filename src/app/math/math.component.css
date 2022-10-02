@@ -2,6 +2,8 @@
     /* box-sizing: border-box; */
     font-family: 'Kumbh Sans', sans-serif;
     scroll-behavior: smooth;
+    height: 100%;
+   
 }
 
 
@@ -94,21 +96,21 @@ width: 100%;
 }
 
 .new{
-/* rgb(94, 172, 87) */
+
     background-color: rgba(206, 248, 206, 0.881);
-    border: 5px solid darkgreen;
-    /* border-radius: 25px; */
+    border: 5px solid;
+    border-image: linear-gradient(to right, lightgreen, darkgreen) 1;
+    border-radius: 35px;
     display: flex;
     /* flex-direction: row; */
 }
 #titles{
     display: flex;
-    justify-content: center;
-    align-items: center;  
+     justify-content: center; 
+    align-self: center; 
     font-size: 35px;
     text-shadow: 3px 3px 5px white;
     font-weight: bolder;
     width: 100%;
-    margin: 0 auto;
 }
 

@@ -10,7 +10,6 @@
 
 
 .container_ {
-   /* border: 15px double white; */
    justify-content: center;
    justify-items: center;
    justify-self: center;
@@ -44,8 +43,6 @@ h3 {
     justify-items: center;
     align-self: center;
     justify-self: center;
-    width: auto;
-    box-sizing: border-box;
 }
 
 #itemList {
@@ -60,6 +57,8 @@ h3 {
 #listItem{
     font-size: 14px;
     background-color: rgb(209, 239, 209);
+   /* flex:block; */
+   margin-left: 30%;
 
  
 }
@@ -73,7 +72,7 @@ h3 {
 
 .editingcontainer {
     text-align: center;
-    border: 4px solid white;
+    /* border: 4px solid white; */
     /* box-shadow: 0 0 40px white; */
     border-radius: 25px;
     /* border-radius: var(--border-radius); */
@@ -88,7 +87,7 @@ h3 {
 
 .form_title {
     /* margin: 1.2rem; */
-    font-size: 18px;
+    font-size: 17px;
  }
  h2{
     color:  rgb(94, 172, 87);
@@ -118,12 +117,13 @@ body{
     margin: auto;
 }
 button{
-    padding:7px;
+    /* padding:7px; */
     border: 2px solid white;
     border-radius: 5px;
     margin: 10px;
     font-size: 13px;
-    width: 150px;
+    width: 140px;
+    height: 25px;
     cursor: pointer;
     border: none;
     background-color: rgb(94, 172, 87);
@@ -135,28 +135,25 @@ button{
 
 input, select{ 
 
-    padding:7px;
-    background-color: rgb(209, 239, 209);
-    border: 2px solid white;
-    border-radius: 5px;
+    /* padding:7px; */
     font-weight:bold ;
     font-size: 15px;
-    width: 150px;
+    width: 140px;
+    height: 25px;
     cursor: pointer;
     border: none;
-    background-color: rgb(94, 172, 87);
+    /* background-color: rgb(94, 172, 87); */
     box-shadow: 1px 1px 3px rgb(148, 148, 148);
     color: white;
     font-weight: bold;
     /* display: flex; */
-
     justify-content: center;
     justify-items: center;
     justify-self: center;
 }
 ::placeholder {
-    color: rgba(255, 255, 255, 0.65);
     font-weight: 200;
+    text-align: center;
   }
 
 .c{
@@ -166,6 +163,7 @@ input, select{
     justify-content: center;
     justify-items: center;
     justify-self: center;
-
 }
-
+#upIt{
+    margin-top: -30px;
+}
