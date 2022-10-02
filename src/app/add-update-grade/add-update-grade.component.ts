@@ -59,15 +59,19 @@ export class AddUpdateGradeComponent implements OnInit {
   lookUpGradeId(): void {
     let dropdown = <HTMLSelectElement>document.getElementById("subjectId");
     let subjectIdInput = Number(dropdown.value);
-    this.gservice.getGradeId(subjectIdInput).subscribe(response => { this.modifyGrade = response; console.log(response) })
+        this.gservice.getGradeId(subjectIdInput).subscribe(response => { this.modifyGrade = response; console.log(response) })
   }
 
   // UPDATE EXISTING GRADE
   update(): void {
     let dropdown = <HTMLSelectElement>document.getElementById("subjectId");
     let subjectIdInput = Number(dropdown.value);
-    this.gservice.getGradeId(subjectIdInput).subscribe(response => { this.modifyGrade = response; console.log(response) })
-    this.gservice.update(this.modifyGrade.gradeId, subjectIdInput, this.grade);
+    console.log(subjectIdInput);
+    this.gservice.getGradeId(subjectIdInput).subscribe(response => { this.modifyGrade = response; 
+      console.log(response) ;
+      this.gservice.update(this.modifyGrade.gradeId, subjectIdInput, this.grade)
+      ;});
+    
   }
 
 }
