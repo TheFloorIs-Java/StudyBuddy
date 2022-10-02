@@ -1,0 +1,17 @@
+<div class="add-update">
+    <select (click)= "lookUpGradeId()" id="subjectId" [(ngModel)] = subjectId > 
+        <option value = 1 >Math</option>
+        <option value = 2 >Science</option>
+        <option value = 3 >History</option>    
+        <option value = 4 >English</option>    
+        <option value = 5 >Physics</option>    
+        <option value = 6 >Art</option>    
+    </select>
+    <input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" placeholder="00" required="required" [(ngModel)]= "grade">
+    <button (click)= "add()" id="add">Add</button>
+    <!-- (click) = "refresh()"" -->
+    <button (click)= "update()"  id="udpate">Update</button>
+    <div id="error">
+        
+    </div>
+</div>

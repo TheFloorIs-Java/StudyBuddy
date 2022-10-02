@@ -1,0 +1,36 @@
+.grade{
+    padding: 10px;
+    /* width: 150px; */
+    border-radius: 15px;
+    /* background-color: rgb(206, 248, 206); */
+    /* box-shadow: 2px 2px 5px rgb(148, 148, 148); */
+}
+.header{
+    display: flex;
+    justify-content: center;
+    font-size: small;
+}
+
+#subject{
+    font-family: sans-serif;
+    margin: 0px;
+    padding-left: 5px;
+}
+
+#grade{
+    font-family: sans-serif;
+    margin: 0px;
+    padding-left: 15px;
+}
+
+h1{
+    color:  rgb(94, 172, 87);
+    font-family: sans-serif;
+    font-size: 20px;
+    text-align: center;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-bottom: 5px;
+    margin: 10px;
+}
+

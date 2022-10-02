@@ -14,7 +14,7 @@
     text-decoration: none;
     font-weight: 900;
     padding-left: 1rem;
-    font-size: 50px;
+    font-size: 30px;
 }
 
 .topnav {
@@ -86,7 +86,7 @@
   .dropdown-content a {
     float: none;
     color: black;
-    padding: 12px 16px;
+    padding: 10px;
     text-decoration: none;
     display: block;
     text-align: left;
@@ -108,13 +108,3 @@
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  .end{
-    display: flex;
-    justify-content: flex-end;
-    justify-items: flex-end;
-    justify-self:flex-end;
-    align-self: flex-end;
-    align-content: flex-end;
-    align-items: flex-end;
-    text-align: end;
-}
