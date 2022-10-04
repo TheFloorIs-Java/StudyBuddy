@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { grade } from '../model/grade';
 import { GradeServiceService } from '../services/grade-service.service';
 
@@ -24,7 +24,10 @@ export class AddUpdateGradeComponent implements OnInit {
   @Input()
   grade: number = 0;
 
-
+  @Output()
+  buttonClicked : EventEmitter<any> = new EventEmitter<any>;
+  @Output()
+  addClicked: EventEmitter<any> = new EventEmitter <any>;
 
   constructor(private gservice: GradeServiceService) { }
 
@@ -43,7 +46,8 @@ export class AddUpdateGradeComponent implements OnInit {
     //GRABBING THE VALUE OF THE DROP DOWN
     let subjectIdInput = Number(dropdown.value);
     //RUNS THROUGH THE ARRAY OF GRADES TO SEE IF THERE ARE ANY MATCHING subjectID, IF EXISTS IT WILL DISPLAY AN ERROR MESSAGE
-    this.gservice.addGrades(subjectIdInput, this.grade);
+ this.gservice.addGrades(subjectIdInput, this.grade);
+ this.addClicked.emit();
     for (let i = 0; i < this.gradeArray.length; i++)
       if (this.gradeArray[i].subjectId == subjectIdInput) {
         let error = <HTMLDivElement>document.getElementById("error");
@@ -51,8 +55,6 @@ export class AddUpdateGradeComponent implements OnInit {
         errMess.innerText = "Subject Already Exists"
         error.appendChild(errMess);
         }
-   
-        // setInterval(() => this.refresh(), 1000);
   }
 
   //this is actively looking up the gradeId while user is picking subject
@@ -66,12 +68,9 @@ export class AddUpdateGradeComponent implements OnInit {
   update(): void {
     let dropdown = <HTMLSelectElement>document.getElementById("subjectId");
     let subjectIdInput = Number(dropdown.value);
-    console.log(subjectIdInput);
     this.gservice.getGradeId(subjectIdInput).subscribe(response => { this.modifyGrade = response; 
-      console.log(response) ;
-      this.gservice.update(this.modifyGrade.gradeId, subjectIdInput, this.grade)
-      ;});
-    
-  }
+      this.gservice.update(this.modifyGrade.gradeId, subjectIdInput, this.grade); this.buttonClicked.emit();});
 
+     
+  }
 }

@@ -11,7 +11,7 @@ export class GradeServiceService {
 
   constructor(private http: HttpClient, private gbservice: GlobalServiceService) { 
   }
-// GET ALL GRADES PER USER  
+ // GET ALL GRADES PER USER  
 getGrades() : Observable<Array<grade>>{
   return this.http.get<Array<grade>>(
     "http://localhost:8000/grades/" + this.gbservice.currentUserId);
@@ -32,9 +32,9 @@ getGrades() : Observable<Array<grade>>{
   
 // UPDATE
   update(gradeId: number, subjectId: number, grade: number) : void {
-    console.log(gradeId);
+    // console.log(gradeId);
     this.http.put<any> ("http://localhost:8000/grades/", {
       gradeId: gradeId, userId:this.gbservice.currentUserId, subjectId:subjectId, grade:grade
-    }).subscribe(response => console.log(response))
+    }).subscribe(response => {console.log(response)})
   }
 }

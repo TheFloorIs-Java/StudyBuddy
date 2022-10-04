@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ChangeDetectorRef} from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectorRef, EventEmitter, Output} from '@angular/core';
 import { homework } from '../model/homework';
 import { GlobalServiceService } from '../services/global-service.service';
 import { HomeworkServiceService } from '../services/homework-service.service';
@@ -9,7 +9,8 @@ import { CompleteComponent } from '../complete/complete.component';
 import { CompleteServiceService } from '../services/complete-service.service';
 
 @Component({
-  providers:[CompleteComponent ],
+  providers:[CompleteComponent],
+
   selector: 'app-homework-component',
   templateUrl: './homework-component.component.html',
   styleUrls: ['./homework-component.component.css']
@@ -17,9 +18,8 @@ import { CompleteServiceService } from '../services/complete-service.service';
 export class HomeworkComponentComponent implements OnInit {
   homeworkArray : Array<homework> = [];
   constructor(public gservice :GlobalServiceService,
-     private hservice : HomeworkServiceService, private c : CompleteComponent,
-     private cservice: CompleteServiceService) {}
-
+  private hservice : HomeworkServiceService, private c : CompleteComponent,
+  private cservice: CompleteServiceService) {}
 
   
  addNewItem : string="";
@@ -60,7 +60,6 @@ addItemToHomework(){
   this.homeworkArray.push({userId: this.gservice.currentUserId, subjectId: 0, hwId: 0, hwItem: this.addNewItem});
   this.addNewItem="";
   }
-
 }
 
 

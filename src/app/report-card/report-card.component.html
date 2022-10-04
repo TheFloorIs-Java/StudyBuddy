@@ -10,6 +10,6 @@
          [subjectId]= "grade.subjectId" 
          [grade]= "grade.grade"></app-user-grades>
     </div>
-    <app-add-update-grade></app-add-update-grade>
+    <app-add-update-grade (buttonClicked)="updateThings()" (addClicked)= "addThings()"></app-add-update-grade>
 
 </div>
