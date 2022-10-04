@@ -26,7 +26,8 @@ export class AddUpdateGradeComponent implements OnInit {
 
   @Output()
   buttonClicked : EventEmitter<any> = new EventEmitter<any>;
-
+  @Output()
+  addClicked: EventEmitter<any> = new EventEmitter <any>;
 
   constructor(private gservice: GradeServiceService) { }
 
@@ -46,7 +47,7 @@ export class AddUpdateGradeComponent implements OnInit {
     let subjectIdInput = Number(dropdown.value);
     //RUNS THROUGH THE ARRAY OF GRADES TO SEE IF THERE ARE ANY MATCHING subjectID, IF EXISTS IT WILL DISPLAY AN ERROR MESSAGE
  this.gservice.addGrades(subjectIdInput, this.grade);
- this.buttonClicked.emit();
+ this.addClicked.emit();
     for (let i = 0; i < this.gradeArray.length; i++)
       if (this.gradeArray[i].subjectId == subjectIdInput) {
         let error = <HTMLDivElement>document.getElementById("error");
