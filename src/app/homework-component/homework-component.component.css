@@ -46,7 +46,7 @@ h3 {
 #itemList {
    border: 4px double white;
    border-radius: 15px;
-   background-color: rgb(209, 239, 209);
+   background-color: white;
    margin-left: 10%;
    margin-right: 10%;
   
@@ -54,7 +54,7 @@ h3 {
 }
 #listItem{
     font-size: 14px;
-    background-color: rgb(209, 239, 209);
+    background-color: white;
    /* flex:block; */
    margin-left: 30%;
 
@@ -65,7 +65,7 @@ h3 {
 .items {
    justify-content: center;
    justify-items: center;
-   background-color: rgb(209, 239, 209);
+   background-color: white;
 }
 
 .editingcontainer {
@@ -126,7 +126,7 @@ button{
     cursor: pointer;
     border: none;
     background-color: black;
-    box-shadow: 1px 1px 3px rgb(148, 148, 148);
+    box-shadow: white;
     color: white;
     font-weight: bold;
 }
@@ -141,7 +141,7 @@ input, select{
     cursor: pointer;
     border: none;
     background-color: white;
-    box-shadow: 1px 1px 3px rgb(148, 148, 148);
+    box-shadow: white;
     color: black;
     font-weight: bold;
     /* display: flex; */

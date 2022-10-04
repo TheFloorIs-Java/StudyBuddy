@@ -17,11 +17,16 @@ import { AddUpdateGradeComponent } from './add-update-grade/add-update-grade.com
 import { ReportCardComponent } from './report-card/report-card.component';
 import { UserGradesComponent } from './user-grades/user-grades.component';
 import { ServiceCardComponent } from './service-card/service-card.component';
+<<<<<<< HEAD
 import { ScienceComponent } from './science/science.component';
 import { HistoryComponent } from './history/history.component';
 import { EnglishComponent } from './english/english.component';
 import { PhysicsComponent } from './physics/physics.component';
 import { ArtComponent } from './art/art.component';
+=======
+import { FooterPageComponent } from './footer-page/footer-page.component';
+
+>>>>>>> refs/remotes/origin/SignInAndLogIn-Harveen
 
 
 @NgModule({
@@ -40,12 +45,17 @@ import { ArtComponent } from './art/art.component';
     ReportCardComponent,
     UserGradesComponent,
     ServiceCardComponent,
+<<<<<<< HEAD
     ScienceComponent,
     HistoryComponent,
     EnglishComponent,
     PhysicsComponent,
     ArtComponent
+=======
+    FooterPageComponent
+>>>>>>> refs/remotes/origin/SignInAndLogIn-Harveen
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,

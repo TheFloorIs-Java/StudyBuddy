@@ -25,7 +25,7 @@ body{
     border: 5px double white;
     border-radius: 20px;
     padding :5px;
-    background-color: rgb(209, 239, 209);
+    background-color: white;
      margin-left: 10%;
    margin-right: 10%;
 }
@@ -46,7 +46,7 @@ button{
     cursor: pointer;
     border: none;
     background-color: black;
-    box-shadow: 1px 1px 3px rgb(148, 148, 148);
+    box-shadow: white;
     color: white;
     font-weight: bold;
 }

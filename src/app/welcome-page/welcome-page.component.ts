@@ -12,7 +12,6 @@ export class WelcomePageComponent implements OnInit {
   menuToggle(): void{
     this.isMenuOpened = !this.isMenuOpened;
   }
-  
   constructor(private gservice : GlobalServiceService) { }
 
   name : String = "";
