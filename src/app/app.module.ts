@@ -17,6 +17,11 @@ import { AddUpdateGradeComponent } from './add-update-grade/add-update-grade.com
 import { ReportCardComponent } from './report-card/report-card.component';
 import { UserGradesComponent } from './user-grades/user-grades.component';
 import { ServiceCardComponent } from './service-card/service-card.component';
+import { ScienceComponent } from './science/science.component';
+import { HistoryComponent } from './history/history.component';
+import { EnglishComponent } from './english/english.component';
+import { PhysicsComponent } from './physics/physics.component';
+import { ArtComponent } from './art/art.component';
 
 
 @NgModule({
@@ -34,7 +39,12 @@ import { ServiceCardComponent } from './service-card/service-card.component';
     AddUpdateGradeComponent,
     ReportCardComponent,
     UserGradesComponent,
-    ServiceCardComponent
+    ServiceCardComponent,
+    ScienceComponent,
+    HistoryComponent,
+    EnglishComponent,
+    PhysicsComponent,
+    ArtComponent
   ],
   imports: [
     BrowserModule,
