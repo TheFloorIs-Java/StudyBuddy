@@ -16,6 +16,8 @@ import { CompleteComponent } from './complete/complete.component';
 import { AddUpdateGradeComponent } from './add-update-grade/add-update-grade.component';
 import { ReportCardComponent } from './report-card/report-card.component';
 import { UserGradesComponent } from './user-grades/user-grades.component';
+import { ServiceCardComponent } from './service-card/service-card.component';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { UserGradesComponent } from './user-grades/user-grades.component';
     CompleteComponent,
     AddUpdateGradeComponent,
     ReportCardComponent,
-    UserGradesComponent
+    UserGradesComponent,
+    ServiceCardComponent
   ],
   imports: [
     BrowserModule,

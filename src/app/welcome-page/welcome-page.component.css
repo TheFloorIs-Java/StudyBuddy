@@ -7,7 +7,7 @@
 }
 
 .hero {
-    background:  linear-gradient(to right, lightgreen, darkgreen);
+    background:  linear-gradient(to right, lightgreen, green);
     height: 100vh;
     background-position: center;
     background-size: cover;
@@ -24,7 +24,7 @@
 }
 
 .hero_content h1 {
-    font-size: clamp(1rem, 4vw, 3rem );
+    font-size: clamp(1rem, 3vw, 2rem );
     text-transform: uppercase;
     margin-bottom: 0.5rem;
 }
@@ -32,4 +32,10 @@
 .hero_content p {
     font-size: clamp(0rem, 2vw, 1rem );
     margin-bottom: 1rem;
+}
+
+.main_img--container {
+    text-align: center;
+    height: 30%;
+    top: 50px;
 }
