@@ -24,6 +24,17 @@ export class ReportCardComponent implements OnInit {
   ngOnInit(): void {
     this.gservice.getGrades().subscribe(data => this.userGrades = data);
   }
+
+  //
+  addThings(): void {
+    console.log("add things"); 
+    this.gservice.getGrades().subscribe(data => this.userGrades = data);
+    for(let i = 0; i < this.userGrades.length; i++)
+      if(this.userGrades[i].subjectId !== this.subjectId){
+        console.log("add things"); 
+        this.gservice.getGrades().subscribe(data => this.userGrades = data);
+    }
+  }
   //this is running before the actual update function - thats why we need to click twice
   updateThings(): void {
     this.gservice.getGrades().subscribe(data => this.userGrades = data);
