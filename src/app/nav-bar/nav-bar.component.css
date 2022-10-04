@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    margin: 0;
+    margin-bottom: auto;
     padding: 0;
     font-family: 'Kumbh Sans', sans-serif;
     scroll-behavior: smooth;
@@ -16,6 +16,7 @@
 .topnav {
     background: linear-gradient(to right, lightgreen, green);
     overflow: hidden;
+    margin-top: 2%;
   }
   
   
@@ -40,9 +41,11 @@
     display: none;
   }
   
+  
 
   .dropdown {
     float: left;
+    overflow: hidden; 
   }
   
 
@@ -78,7 +81,7 @@
   
 
   .topnav a:hover, .dropdown:hover .dropbtn {
-    background-color: #555;
+    background-color: black;
     color: white;
   }
   
@@ -92,3 +95,7 @@
   .dropdown:hover .dropdown-content {
     display: block;
   }
+
+ 
+
+ 

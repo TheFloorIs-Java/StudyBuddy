@@ -17,6 +17,8 @@ import { AddUpdateGradeComponent } from './add-update-grade/add-update-grade.com
 import { ReportCardComponent } from './report-card/report-card.component';
 import { UserGradesComponent } from './user-grades/user-grades.component';
 import { ServiceCardComponent } from './service-card/service-card.component';
+import { FooterPageComponent } from './footer-page/footer-page.component';
+
 
 
 @NgModule({
@@ -34,8 +36,10 @@ import { ServiceCardComponent } from './service-card/service-card.component';
     AddUpdateGradeComponent,
     ReportCardComponent,
     UserGradesComponent,
-    ServiceCardComponent
+    ServiceCardComponent,
+    FooterPageComponent
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,

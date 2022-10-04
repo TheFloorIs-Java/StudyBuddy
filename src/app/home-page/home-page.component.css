@@ -130,7 +130,7 @@
 }
 
 .footer_container {
-    background-color: lightgreen;
+    background: linear-gradient(to right, lightgreen, green);
     padding: 5rem 0;
     display: flex;
     flex-direction: column;
@@ -165,11 +165,11 @@
 }
 
 .footer_link--items > h2 {
-    color: darkgreen;
+    color: black;
 }
 
 .footer_link--items a {
-    color: darkgreen;
+    color: black;
     text-decoration: none;
     margin-bottom: 0.5rem;
 }
@@ -178,6 +178,7 @@
     color: darkgreen;
     transition: 0.3s ease-out;
 }
+
 
 .social_media {
     max-width: 1000px;
