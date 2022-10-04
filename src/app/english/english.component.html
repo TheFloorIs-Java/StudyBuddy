@@ -1,0 +1,28 @@
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Subject English</title>
+</head>
+<body>
+
+<app-nav-bar></app-nav-bar>
+
+    <div class="hero">
+    
+        <div class="hero_content">
+          <div class="new">
+          <div id="titles">Welcome to English {{this.gservice.currentUserName}}</div>
+          <app-tips [Subject]="English" id="tips"></app-tips>
+        </div>
+          <div class="new">
+            <app-report-card class="comp" ></app-report-card>
+            <app-homework-component class="comp" [Subject]="English"></app-homework-component> 
+            <app-complete class="comp" [SubjectNum]="englishNum" [Subject]="English"></app-complete>
+         </div>
+         </div>
+    </div>
+
+    <app-footer-page></app-footer-page>
+
+</body>

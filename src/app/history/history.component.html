@@ -1,0 +1,26 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Subject History</title>
+</head>
+<body>
+
+<app-nav-bar></app-nav-bar>
+
+    <div class="hero">
+    
+        <div class="hero_content">
+          <div class="new">
+          <div id="titles">Welcome to History {{this.gservice.currentUserName}}</div>
+          <app-tips [Subject]="History" id="tips"></app-tips>
+        </div>
+          <div class="new">
+            <app-report-card class="comp" ></app-report-card>
+            <app-homework-component class="comp" [Subject]="History"></app-homework-component> 
+            <app-complete class="comp" [SubjectNum]="histroyNum" [Subject]="History"></app-complete>
+         </div>
+         </div>
+    </div>
+
+    <app-footer-page></app-footer-page>
+</body>

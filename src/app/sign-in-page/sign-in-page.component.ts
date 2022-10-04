@@ -8,10 +8,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./sign-in-page.component.css']
 })
 export class SignInPageComponent implements OnInit {
+
 name :string= "";
 username: string ="";
 password: string ="";
 message: string ="";
+
   constructor( private uservice : UserServiceService, private router: Router) { }
 
   ngOnInit(): void {
@@ -21,7 +23,8 @@ signIn() :void{
   //checks password is long enough to be safe
   if(this.checkPass()){ 
   //when addUser actually works, this should work
-  this.uservice.addUser(this.name, this.username, this.password);
+   this.uservice.addUser(this.name, this.username, this.password);
+   this.uservice.getAllUsers().subscribe(data => console.log(data));
   //for now we pretend it worked and reroute to the log in page
   this.router.navigateByUrl('');
   }

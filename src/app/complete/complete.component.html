@@ -1,0 +1,25 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+ </head>
+ <body>
+  
+    <div class="div">
+        <h3>Completed Homework</h3>
+        <div class="ul">
+        
+    <ol >
+    
+       <li  *ngFor="let complete of completehomework" >{{complete.completeItem}}</li>
+    </ol>
+</div>
+    <div id="buttonCenter">
+      <button (click)="uploadComplete()">Progress</button>
+    </div>
+    </div>
+ </body>
+ </html>
