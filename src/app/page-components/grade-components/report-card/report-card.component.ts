@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { grade } from '../model/grade';
-import { GradeServiceService } from '../services/grade-service.service';
+import { grade } from '../../../model/grade';
+import { GradeServiceService } from '../../../services/grade-service.service';
 
 @Component({
   selector: 'app-report-card',

@@ -1,12 +1,12 @@
 import { Component, OnInit, Input, ChangeDetectorRef, EventEmitter, Output} from '@angular/core';
-import { homework } from '../model/homework';
-import { GlobalServiceService } from '../services/global-service.service';
-import { HomeworkServiceService } from '../services/homework-service.service';
+import { homework } from '../../model/homework';
+import { GlobalServiceService } from '../../services/global-service.service';
+import { HomeworkServiceService } from '../../services/homework-service.service';
 import {  Router } from '@angular/router';
-import { AuthGuardServiceService } from '../services/auth-guard-service.service';
+import { AuthGuardServiceService } from '../../services/auth-guard-service.service';
 import { Observable } from 'rxjs';
 import { CompleteComponent } from '../complete/complete.component';
-import { CompleteServiceService } from '../services/complete-service.service';
+import { CompleteServiceService } from '../../services/complete-service.service';
 
 @Component({
   providers:[CompleteComponent],

@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
-import { grade } from '../model/grade';
-import { subject } from '../model/subject';
-import { GradeServiceService } from '../services/grade-service.service';
-import { SubjectService } from '../services/subject.service';
+import { grade } from '../../../model/grade';
+import { subject } from '../../../model/subject';
+import { GradeServiceService } from '../../../services/grade-service.service';
+import { SubjectService } from '../../../services/subject.service';
 
 @Component({
   selector: 'app-user-grades',
