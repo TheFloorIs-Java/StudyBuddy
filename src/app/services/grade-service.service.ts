@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { grade } from '../model/grade';
 import { GlobalServiceService } from './global-service.service';
+
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,8 @@ export class GradeServiceService {
 
   constructor(private http: HttpClient, private gbservice: GlobalServiceService) { 
   }
+
+  // someEvent : EventEmitter<any> = new EventEmitter<any>;
 // GET ALL GRADES PER USER  
 getGrades() : Observable<Array<grade>>{
   return this.http.get<Array<grade>>(
@@ -19,8 +22,8 @@ getGrades() : Observable<Array<grade>>{
 
 
 // ADD SUBJECT + ADD GRADES
-  addGrades(subjectId: number, grade:number) : void {
-    this.http.post<any>( "http://localhost:8000/grades", {userId:this.gbservice.currentUserId, subjectId:subjectId, grade:grade}).subscribe(response => console.log(response))
+  addGrades(subjectId: number, grade:number):void{
+    this.http.post<any>( "http://localhost:8000/grades", {userId:this.gbservice.currentUserId, subjectId:subjectId, grade:grade}).subscribe(response => {console.log(response);});
   } 
 
 
@@ -35,6 +38,6 @@ getGrades() : Observable<Array<grade>>{
     console.log(gradeId);
     this.http.put<any> ("http://localhost:8000/grades/", {
       gradeId: gradeId, userId:this.gbservice.currentUserId, subjectId:subjectId, grade:grade
-    }).subscribe(response => console.log(response))
+    }).subscribe(response =>{ console.log(response) ;});
   }
 }

@@ -9,7 +9,8 @@ import { CompleteComponent } from '../complete/complete.component';
 import { CompleteServiceService } from '../services/complete-service.service';
 
 @Component({
-  providers:[CompleteComponent ],
+  providers:[CompleteComponent],
+
   selector: 'app-homework-component',
   templateUrl: './homework-component.component.html',
   styleUrls: ['./homework-component.component.css']
@@ -59,7 +60,6 @@ addItemToHomework(){
   this.homeworkArray.push({userId: this.gservice.currentUserId, subjectId: 0, hwId: 0, hwItem: this.addNewItem});
   this.addNewItem="";
   }
-
 }
 
 

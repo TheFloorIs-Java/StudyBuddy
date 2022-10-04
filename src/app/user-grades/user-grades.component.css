@@ -17,10 +17,12 @@ div{
     border-right-style:none;
     display: flex;
     justify-content: center;
+    background-color: white;
 
 }
 
 .col2{
+    background-color: white;
     width: 45px;
     height: 30px;
     margin-right: 10px;

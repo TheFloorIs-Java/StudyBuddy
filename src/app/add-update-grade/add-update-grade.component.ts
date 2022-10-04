@@ -45,7 +45,8 @@ export class AddUpdateGradeComponent implements OnInit {
     //GRABBING THE VALUE OF THE DROP DOWN
     let subjectIdInput = Number(dropdown.value);
     //RUNS THROUGH THE ARRAY OF GRADES TO SEE IF THERE ARE ANY MATCHING subjectID, IF EXISTS IT WILL DISPLAY AN ERROR MESSAGE
-    this.gservice.addGrades(subjectIdInput, this.grade);
+ this.gservice.addGrades(subjectIdInput, this.grade);
+ this.buttonClicked.emit();
     for (let i = 0; i < this.gradeArray.length; i++)
       if (this.gradeArray[i].subjectId == subjectIdInput) {
         let error = <HTMLDivElement>document.getElementById("error");
@@ -53,7 +54,7 @@ export class AddUpdateGradeComponent implements OnInit {
         errMess.innerText = "Subject Already Exists"
         error.appendChild(errMess);
         }
-       this.buttonClicked.emit();
+       
         // setInterval(() => this.refresh(), 1000);
   }
 
@@ -71,9 +72,8 @@ export class AddUpdateGradeComponent implements OnInit {
     console.log(subjectIdInput);
     this.gservice.getGradeId(subjectIdInput).subscribe(response => { this.modifyGrade = response; 
       console.log(response) ;
-      this.gservice.update(this.modifyGrade.gradeId, subjectIdInput, this.grade)
-      ;});
-      this.buttonClicked.emit();
-  }
+      this.gservice.update(this.modifyGrade.gradeId, subjectIdInput, this.grade); this.buttonClicked.emit();});
 
+     
+  }
 }
