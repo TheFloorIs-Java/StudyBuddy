@@ -73,7 +73,7 @@
 }
 
 .hero {
-    background:  linear-gradient(to right, lightgreen, darkgreen);
+    background:  linear-gradient(to right, lightgreen, green);
     display: flex;
     flex-direction:column;
     flex-wrap: wrap;     
