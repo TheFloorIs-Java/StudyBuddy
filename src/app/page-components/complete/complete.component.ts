@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { complete } from '../model/complete';
-import { CompleteServiceService } from '../services/complete-service.service';
-import { GlobalServiceService } from '../services/global-service.service';
+import { complete } from '../../model/complete';
+import { CompleteServiceService } from '../../services/complete-service.service';
+import { GlobalServiceService } from '../../services/global-service.service';
 
 @Component({
   selector: 'app-complete',

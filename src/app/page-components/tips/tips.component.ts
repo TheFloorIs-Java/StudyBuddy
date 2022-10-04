@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { subject } from '../model/subject';
-import { TipServiceService } from '../services/tip-service.service';
+import { subject } from '../../model/subject';
+import { TipServiceService } from '../../services/tip-service.service';
 
 @Component({
   selector: 'app-tips',

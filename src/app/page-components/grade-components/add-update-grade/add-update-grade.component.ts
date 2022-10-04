@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { grade } from '../model/grade';
-import { GradeServiceService } from '../services/grade-service.service';
+import { grade } from '../../../model/grade';
+import { GradeServiceService } from '../../../services/grade-service.service';
 
 @Component({
   selector: 'app-add-update-grade',

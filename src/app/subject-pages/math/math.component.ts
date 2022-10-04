@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GlobalServiceService } from '../services/global-service.service';
+import { GlobalServiceService } from '../../services/global-service.service';
 
 @Component({
   selector: 'app-math',
