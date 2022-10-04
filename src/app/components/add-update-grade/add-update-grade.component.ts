@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { GlobalService } from 'src/app/services/global/global.service';
+import { Component, Input, OnInit, EventEmitter, Output } from '@angular/core';
 import { GradeService } from 'src/app/services/grade/grade.service';
 import { grade } from 'src/app/model/grade';
 
@@ -9,7 +8,10 @@ import { grade } from 'src/app/model/grade';
   styleUrls: ['./add-update-grade.component.css']
 })
 export class AddGradeComponent implements OnInit {
-
+  //CHILD
+  @Output()
+  buttonClicked: EventEmitter<any> = new EventEmitter <any>;
+  
   gradeArray: Array<grade> = [];
 
   modifyGrade: grade = {
@@ -26,16 +28,16 @@ export class AddGradeComponent implements OnInit {
   grade: number = 0;
 
 
+  
+  constructor(private gservice: GradeService) {
+   }
 
-  constructor(private gservice: GradeService) { }
 
   //DISPLAY ALL GRADES OF THE USER ON LOAD
   ngOnInit(): void {
-    this.gservice.getGrades().subscribe(data => this.gradeArray = data);
+    this.gservice.getGrades().subscribe(response => this.gradeArray = response);
   }
 
-  //TO REFRESH WINDOW
-  refresh(): void {location.reload()}
 
   //ADD SUBJECT AND GRADE VIA DROP DOWN
   add(): void {
@@ -51,28 +53,27 @@ export class AddGradeComponent implements OnInit {
         let errMess = document.createElement("p");
         errMess.innerText = "Subject Already Exists"
         error.appendChild(errMess);
-        }
-   
-        setInterval(() => this.refresh(), 1000);
+      }
   }
 
   //this is actively looking up the gradeId while user is picking subject
   lookUpGradeId(): void {
     let dropdown = <HTMLSelectElement>document.getElementById("subjectId");
     let subjectIdInput = Number(dropdown.value);
-    this.gservice.getGradeId(subjectIdInput).subscribe(response => { this.modifyGrade = response; console.log(response) })
+    this.gservice.getGradeId(subjectIdInput).subscribe(response => { this.modifyGrade = response; 
+      // console.log(response) 
+    })
   }
 
   // UPDATE EXISTING GRADE
   update(): void {
+    console.log("fired");
     let dropdown = <HTMLSelectElement>document.getElementById("subjectId");
     let subjectIdInput = Number(dropdown.value);
     this.gservice.getGradeId(subjectIdInput).subscribe(response => { this.modifyGrade = response; console.log(response) })
     this.gservice.update(this.modifyGrade.gradeId, subjectIdInput, this.grade);
+    this.buttonClicked.emit();
   }
-
-
-
 
 }
 

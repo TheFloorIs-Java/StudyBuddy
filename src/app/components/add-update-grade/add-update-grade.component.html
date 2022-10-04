@@ -9,7 +9,7 @@
     </select>
     <input type="number" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57" placeholder="00" required="required" [(ngModel)]= "grade">
     <button (click)= "add()" id="add">Add</button>
-    <button (click)= "update()" (click) = "refresh()" id="udpate">Update</button>
+    <button (click)= "update()" id="update">Update</button>
     <div id="error">
         
     </div>

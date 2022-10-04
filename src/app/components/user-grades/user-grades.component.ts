@@ -12,7 +12,7 @@ import { GradeService } from 'src/app/services/grade/grade.service';
   styleUrls: ['./user-grades.component.css']
 })
 export class UserGradesComponent implements OnInit {
-
+  //CHILD
   @Input()
   subjectId: number = 0;
   subjectName: string = "";
@@ -24,12 +24,15 @@ export class UserGradesComponent implements OnInit {
 
   constructor(private http: HttpClient, private gservice: GradeService, private sservice: SubjectService) { }
 
-  ngOnInit(): void {
-    this.gservice.getGrades().subscribe(data => this.userGrades = data);
 
+  
+  ngOnInit(): void {
     //ID TO NAME
     //LINK TO GETSUBECTBYID http://localhost:8000/subjects/ID/{ID}
-    this.http.get <subject> ("http://localhost:8000/subjects/id/" + this.subjectId).subscribe(data => {this.subjectName = data.subjectName; console.log(this.subjectName)})
+    this.http.get <subject> ("http://localhost:8000/subjects/id/" + this.subjectId).subscribe(data => {
+      this.subjectName = data.subjectName; 
+      // console.log(this.subjectName)
+    })
   }
 
 

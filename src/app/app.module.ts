@@ -9,6 +9,7 @@ import { SignInPageComponent } from './sign-in-page/sign-in-page.component';
 import { UserGradesComponent } from './components/user-grades/user-grades.component';
 import { ReportCardComponent } from './components/report-card/report-card.component';
 import { AddGradeComponent } from './components/add-update-grade/add-update-grade.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { AddGradeComponent } from './components/add-update-grade/add-update-grad
     SignInPageComponent,
     ReportCardComponent,
     UserGradesComponent,
-    AddGradeComponent
+    AddGradeComponent,
   ],
   imports: [
     BrowserModule,

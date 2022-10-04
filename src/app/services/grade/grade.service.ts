@@ -33,10 +33,10 @@ export class GradeService {
     
   // UPDATE
     update(gradeId: number, subjectId: number, grade: number) : void {
-      console.log(gradeId);
+      // console.log(gradeId);
       this.http.put<any> ("http://localhost:8000/grades/", {
         gradeId: gradeId, userId:this.gbservice.currentUserId, subjectId:subjectId, grade:grade
-      }).subscribe(response => console.log(response))
+      }).subscribe(response => {console.log(response)})
     }
 }
 
