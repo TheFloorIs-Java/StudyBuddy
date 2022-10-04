@@ -73,7 +73,7 @@
 }
 
 .hero {
-    background:  linear-gradient(to right, lightgreen, darkgreen);
+    background:  linear-gradient(to right, lightgreen, green);
     display: flex;
     flex-direction:column;
     flex-wrap: wrap;     
@@ -96,18 +96,11 @@ width: 100%;
 }
 
 .new{
-<<<<<<< HEAD
-/* rgb(94, 172, 87) */
-    background: linear-gradient(to right, lightgreen, green);   
 
-    /* border-radius: 25px; */
-=======
-
-    background-color: rgba(206, 248, 206, 0.881);
-    border: 5px solid;
-    border-image: linear-gradient(to right, lightgreen, darkgreen) 1;
-    border-radius: 35px;
->>>>>>> 85c99a063cd9dbf8a7dad7ab86b813c5469de212
+    /* background-color: rgba(206, 248, 206, 0.881); */
+     /* border: 5px solid; */
+    /* border-image: linear-gradient(to right, lightgreen, darkgreen) 1; */
+    /* border-radius: 35px;  */
     display: flex;
     /* flex-direction: row; */
 }

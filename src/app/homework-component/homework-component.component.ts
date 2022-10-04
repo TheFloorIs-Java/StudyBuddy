@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ChangeDetectorRef} from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectorRef, EventEmitter, Output} from '@angular/core';
 import { homework } from '../model/homework';
 import { GlobalServiceService } from '../services/global-service.service';
 import { HomeworkServiceService } from '../services/homework-service.service';
@@ -17,9 +17,8 @@ import { CompleteServiceService } from '../services/complete-service.service';
 export class HomeworkComponentComponent implements OnInit {
   homeworkArray : Array<homework> = [];
   constructor(public gservice :GlobalServiceService,
-     private hservice : HomeworkServiceService, private c : CompleteComponent,
-     private cservice: CompleteServiceService) {}
-
+  private hservice : HomeworkServiceService, private c : CompleteComponent,
+  private cservice: CompleteServiceService) {}
 
   
  addNewItem : string="";

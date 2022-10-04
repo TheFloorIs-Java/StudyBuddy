@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { grade } from '../model/grade';
 import { GradeServiceService } from '../services/grade-service.service';
 
@@ -24,6 +24,8 @@ export class AddUpdateGradeComponent implements OnInit {
   @Input()
   grade: number = 0;
 
+  @Output()
+  buttonClicked : EventEmitter<any> = new EventEmitter<any>;
 
 
   constructor(private gservice: GradeServiceService) { }
@@ -51,7 +53,7 @@ export class AddUpdateGradeComponent implements OnInit {
         errMess.innerText = "Subject Already Exists"
         error.appendChild(errMess);
         }
-   
+       this.buttonClicked.emit();
         // setInterval(() => this.refresh(), 1000);
   }
 
@@ -71,7 +73,7 @@ export class AddUpdateGradeComponent implements OnInit {
       console.log(response) ;
       this.gservice.update(this.modifyGrade.gradeId, subjectIdInput, this.grade)
       ;});
-    
+      this.buttonClicked.emit();
   }
 
 }

@@ -24,4 +24,8 @@ export class ReportCardComponent implements OnInit {
     this.gservice.getGrades().subscribe(data => this.userGrades = data);
 
   }
+
+  updateThings() :void{
+    this.gservice.getGrades().subscribe(data => this.userGrades = data);
+  }
 }
