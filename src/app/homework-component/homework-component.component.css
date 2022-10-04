@@ -133,7 +133,6 @@ button{
 
 
 input, select{ 
-
     /* padding:7px; */
     font-weight:bold ;
     font-size: 15px;
@@ -141,9 +140,9 @@ input, select{
     height: 25px;
     cursor: pointer;
     border: none;
-    /* background-color: rgb(94, 172, 87); */
+    background-color: white;
     box-shadow: 1px 1px 3px rgb(148, 148, 148);
-    color: white;
+    color: black;
     font-weight: bold;
     /* display: flex; */
     justify-content: center;
