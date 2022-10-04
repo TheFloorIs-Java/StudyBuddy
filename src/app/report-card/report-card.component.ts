@@ -26,6 +26,11 @@ export class ReportCardComponent implements OnInit {
   }
 
   updateThings() :void{
-    this.gservice.getGrades().subscribe(data => {this.userGrades = data; console.log(data)});
+    this.gservice.getGrades().subscribe(data => this.userGrades = data);
+    for(let i = 0; i < this.userGrades.length; i++)
+    if(this.userGrades[i].grade !== this.grade){
+      console.log("update things"); 
+      this.gservice.getGrades().subscribe(data => this.userGrades = data);
+    }
   }
 }

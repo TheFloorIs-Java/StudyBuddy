@@ -54,8 +54,6 @@ export class AddUpdateGradeComponent implements OnInit {
         errMess.innerText = "Subject Already Exists"
         error.appendChild(errMess);
         }
-       
-        // setInterval(() => this.refresh(), 1000);
   }
 
   //this is actively looking up the gradeId while user is picking subject
@@ -69,9 +67,7 @@ export class AddUpdateGradeComponent implements OnInit {
   update(): void {
     let dropdown = <HTMLSelectElement>document.getElementById("subjectId");
     let subjectIdInput = Number(dropdown.value);
-    console.log(subjectIdInput);
     this.gservice.getGradeId(subjectIdInput).subscribe(response => { this.modifyGrade = response; 
-      console.log(response) ;
       this.gservice.update(this.modifyGrade.gradeId, subjectIdInput, this.grade); this.buttonClicked.emit();});
 
      
