@@ -42,14 +42,23 @@ public trackHw(index: number, item: homework): string{
 // }
 
 complete(){
-  if(this.itemCompleted!=""){
-    this.hservice.deleteHwItem(this.itemCompleted);
+
+  if(this.itemCompleted=="" && this.addItemToHomework.length>0){
+    this.hservice.deleteHwItem(this.homeworkArray[0].hwItem);
     for(let i =0; i<this.homeworkArray.length; i++){
       if(this.homeworkArray[i].hwItem==this.itemCompleted){
         this.homeworkArray.splice(i,1);
       }
     }
-    this.itemCompleted!=""
+  }else if(this.itemCompleted!=""){
+    this.hservice.deleteHwItem(this.itemCompleted);
+    for(let i =0; i<this.homeworkArray.length; i++){
+      if(this.homeworkArray[i].hwItem==this.itemCompleted){
+        this.homeworkArray.splice(i,1);
+      
+      }
+    }
+
 }
 }
 
