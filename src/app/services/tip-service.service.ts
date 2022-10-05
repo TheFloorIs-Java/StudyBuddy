@@ -12,7 +12,7 @@ export class TipServiceService {
   constructor(private http : HttpClient) { }
 
   getTipsBySubjectName(name:String) :Observable<subject>{
-    return this.http.get<subject>("http://localhost:8000/subjects/name/"+name);
+    return this.http.get<subject>("http://localhost:8050/subjects/name/"+name);
   
   }
 }
