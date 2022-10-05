@@ -9,7 +9,7 @@
     <div class="hero">
         <div class="hero_content">
             <h1>Welcome Back {{name}}!</h1>
-           
+           <div><h2>You have Homework in these subjects due:</h2><span  *ngFor ="let subs of  subArray"  routerLink="/{{subs}}" >{{subs}} </span></div>
             <app-service-card></app-service-card>
         </div>
         
