@@ -43,8 +43,10 @@ public trackHw(index: number, item: homework): string{
 
 complete(){
 
-  if(this.itemCompleted=="" && this.addItemToHomework.length>0){
-    this.hservice.deleteHwItem(this.homeworkArray[0].hwItem);
+
+  if(this.itemCompleted=="" && this.homeworkArray.length>0){
+    this.itemCompleted= this.homeworkArray[0].hwItem;
+    this.hservice.deleteHwItem(this.itemCompleted);
     for(let i =0; i<this.homeworkArray.length; i++){
       if(this.homeworkArray[i].hwItem==this.itemCompleted){
         this.homeworkArray.splice(i,1);
