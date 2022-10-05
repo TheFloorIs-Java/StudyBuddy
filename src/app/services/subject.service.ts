@@ -22,7 +22,7 @@ export class SubjectService {
    }
 
   getAllSubjects(): Observable<Array<subject>>{
-    return this.http.get<Array<subject>>("http://localhost:8000/subjects");
+    return this.http.get<Array<subject>>("http://localhost:8050/subjects");
   }
 getSubjectById(id : number) : string {
   for(let i =0; i< this.allSubjects.length; i++){
