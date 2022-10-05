@@ -25,7 +25,9 @@ export class HomeworkServiceService {
   getAllHw() : Observable<Array<homework>> {
     return this.http.get<Array<homework>>("http://localhost:8000/homework");
   }
-
+  getAllHwByUser() : Observable<Array<homework>> {
+    return this.http.get<Array<homework>>("http://localhost:8000/homework/user/"+this.gservice.currentUserId);
+  }
   getHwForSubject(subjectIn: string): Observable<Array<homework>> {
       return this.http.get<Array<homework>>("http://localhost:8000/homework/"+this.gservice.currentUserId+"/"+this.sservice.getSubjectByName(subjectIn));
   }
