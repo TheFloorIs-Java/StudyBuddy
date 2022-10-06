@@ -22,10 +22,16 @@ export class WelcomePageComponent implements OnInit {
   name : String = "";
   homeworkList :Array<homework>   = [];
   subArray : Set<String> = new(Set);
+  anyHomework: boolean = false;
   ngOnInit(): void {
    this.homService.getAllHwByUser().subscribe(data => {this.homeworkList=data;
     for(let i=0; i<this.homeworkList.length; i++){
         this.subArray.add(this.subService.getSubjectById(this.homeworkList[i].subjectId))
+    };
+    if(this.subArray.size>0){
+      this.anyHomework=true;
+    }else{
+      this.anyHomework=false;
     }
   });
     this.name =this.gservice.currentUserName;

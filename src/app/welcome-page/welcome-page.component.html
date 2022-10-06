@@ -9,7 +9,8 @@
     <div class="hero">
         <div class="hero_content">
             <h1>Welcome Back {{name}}!</h1>
-           <div><h2>You have Homework in these subjects due:</h2><span  *ngFor ="let subs of  subArray"  routerLink="/{{subs}}" >{{subs}} </span></div>
+           <div  *ngIf="anyHomework else noHomework"><h2>You have Homework in these subjects due:</h2><span  *ngFor ="let subs of  subArray"  routerLink="/{{subs}}" >{{subs}} </span></div>
+           <ng-template #noHomework><h2>Congratulations, you have no Homework to do!</h2></ng-template>
             <app-service-card></app-service-card>
 
             <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap" rel="stylesheet">
