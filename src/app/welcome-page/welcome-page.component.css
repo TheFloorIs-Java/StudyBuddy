@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Kumbh Sans', sans-serif;
     scroll-behavior: smooth;
 }
 
@@ -14,7 +13,7 @@
     padding: 0.5rem calc((100vw - 1200px) / 2);
     display: flex;
     justify-content: flex-start;
-       
+    font-family: 'Kumbh Sans', sans-serif;
 }
 
 .hero_content {
@@ -24,13 +23,14 @@
 }
 
 .hero_content h1 {
-    font-size: clamp(1rem, 3vw, 2rem );
+    font-size: 3rem;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
+    text-shadow: 3px 3px 5px white;
 }
 
-.hero_content p {
-    font-size: clamp(0rem, 2vw, 1rem );
+.hero_content h2 {
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
 

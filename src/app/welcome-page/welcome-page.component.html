@@ -11,10 +11,11 @@
             <h1>Welcome Back {{name}}!</h1>
            <div><h2>You have Homework in these subjects due:</h2><span  *ngFor ="let subs of  subArray"  routerLink="/{{subs}}" >{{subs}} </span></div>
             <app-service-card></app-service-card>
+
+            <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap" rel="stylesheet">
         </div>
         
     </div>
-
     <app-footer-page></app-footer-page>
 
 </body>
