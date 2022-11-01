@@ -7,13 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  // Math : string = "Math";
+  s: any = '2022-10-11T20:32:43.937+00:00';
   constructor() { }
-
+blah : string ="hi";
   ngOnInit(): void {
-    // this.sservice.getAllSubjects();
-    // console.log("did it");
-    // console.log(this.sservice.getSubjectByName(this.Math))
+console.log(this.changeTime(this.s));
+  }
+  changeTime(str: any): string{
+   let d1 = str.slice(0,10); //date but in year/month/day form
+   let dArray = d1.split('-');
+   let date = dArray[1]+"/"+dArray[2]+"/"+dArray[0] //now in month/day/year
+   let time = str.slice(11,16)
+    return "Date: "+date+ "  Time: "+time;
   }
 
 }

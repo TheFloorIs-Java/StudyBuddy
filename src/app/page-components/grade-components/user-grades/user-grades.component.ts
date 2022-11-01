@@ -27,7 +27,7 @@ export class UserGradesComponent implements OnInit {
     this.gservice.getGrades().subscribe(data => this.userGrades = data);
 
     //ID TO NAME
-   
+    //LINK TO GETSUBECTBYID http://localhost:8000/subjects/ID/{ID}
     this.http.get <subject> ("http://localhost:8051/subjects/id/" + this.subjectId).subscribe(data => {this.subjectName = data.subjectName; console.log(this.subjectName)})
   }
 
