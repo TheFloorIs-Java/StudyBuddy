@@ -16,7 +16,7 @@ export class CompleteServiceService {
    */
   getAllHwCompleted(): Observable<Array<complete>> {
     return this.http.get<Array<complete>>(
-      "http://localhost:8050/complete");
+      "http://localhost:8051/complete");
   }
 
   /**
@@ -27,6 +27,6 @@ export class CompleteServiceService {
    */
   getHwCompletedByUserAndSubjectId(userId: number, subjectId: number): Observable<Array<complete>> {
     return this.http.get<Array<complete>>(
-      "http://localhost:8050/complete/" + userId + "/" + subjectId + "/");
+      "http://localhost:8051/complete/" + userId + "/" + subjectId + "/");
   }
 }

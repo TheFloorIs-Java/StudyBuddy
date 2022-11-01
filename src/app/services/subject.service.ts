@@ -28,7 +28,7 @@ export class SubjectService {
    * @returns an arraay of subject data with all the information
    */
   getAllSubjects(): Observable<Array<subject>> {
-    return this.http.get<Array<subject>>("http://localhost:8050/subjects");
+    return this.http.get<Array<subject>>("http://localhost:8051/subjects");
   }
 
   /**
