@@ -17,28 +17,38 @@ export class ReportCardComponent implements OnInit {
   grade: number = 0;
 
   userGrades: Array<grade> = [];
- 
-  constructor(private gservice: GradeServiceService){}
 
+  constructor(private gservice: GradeServiceService) { }
+
+  /**
+   * On page load, it will display all the user's grades
+   */
   ngOnInit(): void {
     this.gservice.getGrades().subscribe(data => this.userGrades = data);
+  }
 
-  }
+  /**
+   * When the User clicks the Add button, it will emit to this parent component so it will know that there has been a change and it should reload the data
+   */
   addThings(): void {
-    console.log("add things"); 
+    console.log("add things");
     this.gservice.getGrades().subscribe(data => this.userGrades = data);
-    for(let i = 0; i < this.userGrades.length; i++)
-      if(this.userGrades[i].subjectId !== this.subjectId){
-        console.log("add things"); 
+    for (let i = 0; i < this.userGrades.length; i++)
+      if (this.userGrades[i].subjectId !== this.subjectId) {
+        console.log("add things");
         this.gservice.getGrades().subscribe(data => this.userGrades = data);
-    }
+      }
   }
-  updateThings() :void{
+
+  /**
+ * When the User clicks the Update button, it will emit to this parent component so it will know that there has been a change and it should reload the data
+ */
+  updateThings(): void {
     this.gservice.getGrades().subscribe(data => this.userGrades = data);
-    for(let i = 0; i < this.userGrades.length; i++)
-    if(this.userGrades[i].grade !== this.grade){
-      console.log("update things"); 
-      this.gservice.getGrades().subscribe(data => this.userGrades = data);
-    }
+    for (let i = 0; i < this.userGrades.length; i++)
+      if (this.userGrades[i].grade !== this.grade) {
+        console.log("update things");
+        this.gservice.getGrades().subscribe(data => this.userGrades = data);
+      }
   }
 }

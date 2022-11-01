@@ -25,56 +25,60 @@ export class AddUpdateGradeComponent implements OnInit {
   grade: number = 0;
 
   @Output()
-  buttonClicked : EventEmitter<any> = new EventEmitter<any>;
+  buttonClicked: EventEmitter<any> = new EventEmitter<any>;
+
   @Output()
-  addClicked: EventEmitter<any> = new EventEmitter <any>;
+  addClicked: EventEmitter<any> = new EventEmitter<any>;
 
   constructor(private gservice: GradeServiceService) { }
 
-  //DISPLAY ALL GRADES OF THE USER ON LOAD
+  /**
+   * On page load, it will display all the user's grades
+   */
   ngOnInit(): void {
     this.gservice.getGrades().subscribe(data => this.gradeArray = data);
   }
 
-  //TO REFRESH WINDOW
-  refresh(): void {location.reload()}
-
-  //ADD SUBJECT AND GRADE VIA DROP DOWN
+  /**
+   * When the user clicks on the add button, it will run the Grade Service to communicate to our API to perform an HTTP POST Request to add a new grade
+   * It will also prevent users from adding a subject that already exists
+   */
   add(): void {
-    //SELECTING THE DROP DOWN FROM HTML
     let dropdown = <HTMLSelectElement>document.getElementById("subjectId");
-    //GRABBING THE VALUE OF THE DROP DOWN
     let subjectIdInput = Number(dropdown.value);
-    //RUNS THROUGH THE ARRAY OF GRADES TO SEE IF THERE ARE ANY MATCHING subjectID, IF EXISTS IT WILL DISPLAY AN ERROR MESSAGE
- this.gservice.addGrades(subjectIdInput, this.grade);
- this.addClicked.emit();
-    for (let i = 0; i < this.gradeArray.length; i++){
+    this.gservice.addGrades(subjectIdInput, this.grade);
+    this.addClicked.emit();
+    for (let i = 0; i < this.gradeArray.length; i++) {
       if (this.gradeArray[i].subjectId == subjectIdInput) {
         let error = <HTMLDivElement>document.getElementById("error");
         let errMess = document.createElement("p");
         errMess.innerText = "Subject Already Exists"
         error.appendChild(errMess);
-        }
       }
-        
+    }
   }
 
-
-  //this is actively looking up the gradeId while user is picking subject
+  /**
+   * This function actively is looking up the gradeId of the grade in our database as the user is selecting the subject
+   */
   lookUpGradeId(): void {
     let dropdown = <HTMLSelectElement>document.getElementById("subjectId");
     let subjectIdInput = Number(dropdown.value);
-        this.gservice.getGradeId(subjectIdInput).subscribe(response => { this.modifyGrade = response; console.log(response) })
+    this.gservice.getGradeId(subjectIdInput).subscribe(response => { this.modifyGrade = response; console.log(response) })
   }
 
-  // UPDATE EXISTING GRADE
+  /**
+   * When user clicks on the Update button, it will run the Grade Service to communicate to our API to perform an HTTP PUT Request to update a grade
+   */
   update(): void {
     let dropdown = <HTMLSelectElement>document.getElementById("subjectId");
     let subjectIdInput = Number(dropdown.value);
-    this.gservice.getGradeId(subjectIdInput).subscribe(response => { this.modifyGrade = response; 
-      this.gservice.update(this.modifyGrade.gradeId, subjectIdInput, this.grade); this.buttonClicked.emit();});
-      let error = <HTMLDivElement>document.getElementById("error");
-      error.innerHTML="";
-     
+    this.gservice.getGradeId(subjectIdInput).subscribe(response => {
+      this.modifyGrade = response;
+      this.gservice.update(this.modifyGrade.gradeId, subjectIdInput, this.grade); 
+      this.buttonClicked.emit();
+    });
+    let error = <HTMLDivElement>document.getElementById("error");
+    error.innerHTML = "";
   }
 }

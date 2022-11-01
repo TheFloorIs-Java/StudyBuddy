@@ -23,12 +23,12 @@ export class UserGradesComponent implements OnInit {
 
   constructor(private http: HttpClient, private gservice: GradeServiceService, private sservice: SubjectService) { }
 
+    /**
+   * On page load, it will load the grades for the current user, and transform the subjectId into their names
+   */
   ngOnInit(): void {
     this.gservice.getGrades().subscribe(data => this.userGrades = data);
-
-    //ID TO NAME
-    //LINK TO GETSUBECTBYID http://localhost:8000/subjects/ID/{ID}
-    this.http.get <subject> ("http://localhost:8051/subjects/id/" + this.subjectId).subscribe(data => {this.subjectName = data.subjectName; console.log(this.subjectName)})
+    this.http.get<subject>("http://localhost:8051/subjects/id/" + this.subjectId).subscribe(data => { this.subjectName = data.subjectName; console.log(this.subjectName) })
   }
 
 }
