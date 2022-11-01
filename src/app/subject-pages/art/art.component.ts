@@ -7,7 +7,11 @@ import { GlobalServiceService } from '../../services/global-service.service';
   styleUrls: ['./art.component.css']
 })
 export class ArtComponent implements OnInit {
-
+/**
+ * 
+ * @param gservice when the user select art it retrive data from 
+ * global service  and/or  save new info to global service 
+ */
   constructor(public gservice : GlobalServiceService) { }
   Art : string = "Art";
   artNum : number = 6;
