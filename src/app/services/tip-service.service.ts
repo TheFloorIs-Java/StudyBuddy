@@ -7,12 +7,16 @@ import { subject } from '../model/subject';
   providedIn: 'root'
 })
 export class TipServiceService {
-  
 
-  constructor(private http : HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-  getTipsBySubjectName(name:String) :Observable<subject>{
-    return this.http.get<subject>("http://localhost:8050/subjects/name/"+name);
-  
+  /**
+   * HTTP GET Request - Retrieve all tips data from the subject database based on the subject name
+   * @param name - The name of the subject
+   * @returns subject based on the name parameter provided
+   */
+  getTipsBySubjectName(name: String): Observable<subject> {
+    return this.http.get<subject>("http://localhost:8050/subjects/name/" + name);
+
   }
 }

@@ -5,28 +5,43 @@ import { HomeworkServiceService } from './homework-service.service';
   providedIn: 'root'
 })
 export class GlobalServiceService {
-//this this going to be used to declare the global user that is signed in 
-  currentUserName : string="";
-  currentUserId : number=0;
+  /** 
+   * Storing current user logged in
+   */
+  currentUserName: string = "";
+  currentUserId: number = 0;
 
-//this is going to prove if someone is logged in
- private loggedIn : boolean;
+  /**
+   * To prove if someone is logged in
+   */
+  private loggedIn: boolean;
 
-  constructor( ) {
-    this.loggedIn=false;
-   }
+  constructor() {
+    /**
+     * As default we set loggedIn to be false
+     */
+    this.loggedIn = false;
+  }
 
-  //returns if user is Logged In 
-  isLoggedIn() : boolean{
+  /**
+   * Checking to see if the user is logged in
+   */
+  isLoggedIn(): boolean {
     return this.loggedIn;
   }
-  //indicates user is Logged In
-  LogUserIn() : void{
-    this.loggedIn=true;
+
+  /**
+   * Indicates the user is logged in
+   */
+  LogUserIn(): void {
+    this.loggedIn = true;
   }
-  //lets user log out
-  LogUserOut() : void{
-    this.loggedIn=false;
+
+  /**
+   * Allows the user to log out
+   */
+  LogUserOut(): void {
+    this.loggedIn = false;
     //this.hservice.homeworkArray=[];
   }
 
