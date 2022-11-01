@@ -28,7 +28,7 @@ export class UserGradesComponent implements OnInit {
 
     //ID TO NAME
     //LINK TO GETSUBECTBYID http://localhost:8000/subjects/ID/{ID}
-    this.http.get <subject> ("http://localhost:8050/subjects/id/" + this.subjectId).subscribe(data => {this.subjectName = data.subjectName; console.log(this.subjectName)})
+    this.http.get <subject> ("http://localhost:8051/subjects/id/" + this.subjectId).subscribe(data => {this.subjectName = data.subjectName; console.log(this.subjectName)})
   }
 
 }

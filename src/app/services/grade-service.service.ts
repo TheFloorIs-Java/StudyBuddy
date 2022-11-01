@@ -18,7 +18,7 @@ export class GradeServiceService {
    */
   getGrades(): Observable<Array<grade>> {
     return this.http.get<Array<grade>>(
-      "http://localhost:8050/grades/" + this.gbservice.currentUserId);
+      "http://localhost:8051/grades/" + this.gbservice.currentUserId);
   }
 
   /**
@@ -27,7 +27,7 @@ export class GradeServiceService {
    * @param grade - a number from 0-100 that users may type in for their current grade in the subject
    */
   addGrades(subjectId: number, grade: number): void {
-    this.http.post<any>("http://localhost:8050/grades", { userId: this.gbservice.currentUserId, subjectId: subjectId, grade: grade }).subscribe(response => console.log(response))
+    this.http.post<any>("http://localhost:8051/grades", { userId: this.gbservice.currentUserId, subjectId: subjectId, grade: grade }).subscribe(response => console.log(response))
   }
 
   /**
@@ -36,7 +36,7 @@ export class GradeServiceService {
    * @returns an array of grade data that matches the current user logged in and subjectId
    */
   getGradeId(subjectId: number): Observable<grade> {
-    return this.http.get<grade>("http://localhost:8050/grades/" + this.gbservice.currentUserId + "/" + subjectId
+    return this.http.get<grade>("http://localhost:8051/grades/" + this.gbservice.currentUserId + "/" + subjectId
     )
   }
 
@@ -45,7 +45,7 @@ export class GradeServiceService {
    */
   update(gradeId: number, subjectId: number, grade: number): void {
     // console.log(gradeId);
-    this.http.put<any>("http://localhost:8050/grades/", {
+    this.http.put<any>("http://localhost:8051/grades/", {
       gradeId: gradeId, userId: this.gbservice.currentUserId, subjectId: subjectId, grade: grade
     }).subscribe(response => { console.log(response) })
   }

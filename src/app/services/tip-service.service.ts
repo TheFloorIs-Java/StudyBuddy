@@ -16,7 +16,7 @@ export class TipServiceService {
    * @returns subject based on the name parameter provided
    */
   getTipsBySubjectName(name: String): Observable<subject> {
-    return this.http.get<subject>("http://localhost:8050/subjects/name/" + name);
+    return this.http.get<subject>("http://localhost:8051/subjects/name/" + name);
 
   }
 }

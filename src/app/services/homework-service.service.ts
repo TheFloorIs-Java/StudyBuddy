@@ -21,7 +21,7 @@ export class HomeworkServiceService {
      * @returns an array of the homework data with all the information
      */
   getAllHw(): Observable<Array<homework>> {
-    return this.http.get<Array<homework>>("http://localhost:8050/homework");
+    return this.http.get<Array<homework>>("http://localhost:8051/homework");
   }
 
   /**
@@ -29,7 +29,7 @@ export class HomeworkServiceService {
    * @returns an array of the homework data with all the information based on the current user logged in
    */
   getAllHwByUser(): Observable<Array<homework>> {
-    return this.http.get<Array<homework>>("http://localhost:8050/homework/user/" + this.gservice.currentUserId);
+    return this.http.get<Array<homework>>("http://localhost:8051/homework/user/" + this.gservice.currentUserId);
   }
 
   /**
@@ -37,7 +37,7 @@ export class HomeworkServiceService {
   * @returns an array of the homework data with all the information based on the current user logged in and subject
   */
   getHwForSubject(subjectIn: string): Observable<Array<homework>> {
-    return this.http.get<Array<homework>>("http://localhost:8050/homework/" + this.gservice.currentUserId + "/" + this.sservice.getSubjectByName(subjectIn));
+    return this.http.get<Array<homework>>("http://localhost:8051/homework/" + this.gservice.currentUserId + "/" + this.sservice.getSubjectByName(subjectIn));
   }
   // returnHwSubject(subjectin : string ): Array<homework>{
   //   return null;
@@ -50,7 +50,7 @@ export class HomeworkServiceService {
    */
   addHwItemForSubject(subjectIn: string, hwItemIn: string): void {
     this.getAllHw().subscribe(data => this.homeworkArray = data);
-    this.http.post<any>("http://localhost:8050/homework",
+    this.http.post<any>("http://localhost:8051/homework",
       { userId: this.gservice.currentUserId, subjectId: this.sservice.getSubjectByName(subjectIn), hwItem: hwItemIn }).subscribe(data => console.log(data));
     this.getAllHw().subscribe(data => this.homeworkArray = data);
   }
@@ -61,7 +61,7 @@ export class HomeworkServiceService {
    */
   deleteHwItem(hwIn: string) {
     this.getAllHw().subscribe(data => this.homeworkArray = data);
-    this.http.get<any>("http://localhost:8050/homework/" + this.getIdHw(hwIn)).subscribe(data => console.log(data));
+    this.http.get<any>("http://localhost:8051/homework/" + this.getIdHw(hwIn)).subscribe(data => console.log(data));
     this.getAllHw().subscribe(data => this.homeworkArray = data);
   }
 

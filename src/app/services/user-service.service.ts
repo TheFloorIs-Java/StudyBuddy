@@ -15,7 +15,7 @@ export class UserServiceService {
    * @returns an array of the user data with all the information
    */
   getAllUsers(): Observable<Array<user>> {
-    return this.http.get<Array<user>>("http://localhost:8050/users");
+    return this.http.get<Array<user>>("http://localhost:8051/users");
   }
 
   /**
@@ -25,7 +25,7 @@ export class UserServiceService {
    * @param passwordIn  - Passwrod input by user
    */
   addUser(nameIn: string, usernameIn: string, passwordIn: string): void {
-    this.http.post<any>("http://localhost:8050/users",
+    this.http.post<any>("http://localhost:8051/users",
       { name: nameIn, username: usernameIn, password: passwordIn }).subscribe(data => console.log(data));
   }
 
