@@ -7,13 +7,14 @@ import { TipServiceService } from '../../services/tip-service.service';
   templateUrl: './tips.component.html',
   styleUrls: ['./tips.component.css']
 })
-export class TipsComponent implements OnInit { 
-
-  @Input()
-  Subject: string = "";
-
-  tn: subject = { subjectId: 1, subjectName: "Math", tips: "dd" };
-
+export class TipsComponent implements OnInit {
+  /**
+   * in this section we connect child class and parent class by  using @Input and 
+   * retrive data from our tip service  
+   */
+@Input()
+  Subject : string ="";
+  tn :  subject = {subjectId :1,subjectName:"Math",tips:"dd"};
   constructor(private tservice: TipServiceService) { }
 
   /**
