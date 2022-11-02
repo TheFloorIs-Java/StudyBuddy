@@ -9,8 +9,8 @@ import { GlobalServiceService } from '../../services/global-service.service';
 export class ArtComponent implements OnInit {
 /**
  * 
- * @param gservice when the user select art it retrive data from 
- * global service  and/or  save new info to global service 
+ * @param gservice when the user select art it retrive data like art home word report card and tips  from 
+ * global service  and/or  save new  added info to global service 
  */
   constructor(public gservice : GlobalServiceService) { }
   Art : string = "Art";
