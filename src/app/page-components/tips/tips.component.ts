@@ -7,14 +7,20 @@ import { TipServiceService } from '../../services/tip-service.service';
   templateUrl: './tips.component.html',
   styleUrls: ['./tips.component.css']
 })
-export class TipsComponent implements OnInit {
-@Input()
-  Subject : string ="";
-  tn :  subject = {subjectId :1,subjectName:"Math",tips:"dd"};
+export class TipsComponent implements OnInit { 
+
+  @Input()
+  Subject: string = "";
+
+  tn: subject = { subjectId: 1, subjectName: "Math", tips: "dd" };
+
   constructor(private tservice: TipServiceService) { }
 
+  /**
+   * On page load, it will get the tips based on the subject name the user is currently viewing
+   */
   ngOnInit(): void {
-    this.tservice.getTipsBySubjectName(this.Subject).subscribe(data =>this.tn=data);
+    this.tservice.getTipsBySubjectName(this.Subject).subscribe(data => this.tn = data);
     console.log(this.tn);
   }
 }
